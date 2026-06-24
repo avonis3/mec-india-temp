@@ -1,13 +1,13 @@
-import Hero from "@/components/Hero";
-import MarqueeBar from "@/components/MarqueeBar";
-import IntroSection from "@/components/IntroSection";
-import StatsStrip from "@/components/StatsStrip";
-import ServicesSection from "@/components/ServicesSection";
-import PortfolioPreview from "@/components/PortfolioPreview";
-import WhyUs from "@/components/WhyUs";
-import ProcessSection from "@/components/ProcessSection";
-import IndustriesSection from "@/components/IndustriesSection";
-import ContactSection from "@/components/ContactSection";
+import Hero from "@/components/homepage/Hero";
+import MarqueeBar from "@/components/homepage/MarqueeBar";
+import IntroSection from "@/components/homepage/IntroSection";
+import StatsStrip from "@/components/homepage/StatsStrip";
+import ServicesSection from "@/components/homepage/ServicesSection";
+import PortfolioPreview from "@/components/homepage/PortfolioPreview";
+import WhyUs from "@/components/homepage/WhyUs";
+import ProcessSection from "@/components/homepage/ProcessSection";
+import IndustriesSection from "@/components/homepage/IndustriesSection";
+import ContactSection from "@/components/homepage/ContactSection";
 
 export default function Home() {
   return (
@@ -22,7 +22,6 @@ export default function Home() {
       <ProcessSection />
       <IndustriesSection />
       <ContactSection />
-
     </>
   );
 }
