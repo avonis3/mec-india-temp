@@ -1,51 +1,66 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 
 const projects = [
   {
-    title: "FIHI 2022, Bangalore",
+    title: "Shakti Foods Stall",
     cat: "Exhibition Stall",
     image: "/images/homepage/ourwork1.png",
   },
   {
-    title: "Chemtech 2023, Mumbai",
+    title: "Chemtech 2023 Mumbai",
     cat: "Exhibition Stall",
     image: "/images/homepage/ourwork2.png",
   },
   {
-    title: "ACREX 2023, Mumbai",
-    cat: "Octanorm",
+    title: "Lalbaba Engineering Stall",
+    cat: "Exhibition Stall",
     image: "/images/homepage/ourwork3.png",
   },
   {
-    title: "OSH India 2023, Hyderabad",
-    cat: "Octanorm",
-    image: "/images/homepage/service3.png",
-  },
-  {
-    title: "German Hanger, Mumbai",
-    cat: "German Hanger",
-    image: "/images/homepage/service2.png",
-  },
-  {
-    title: "Custom Stall Design",
+    title: "Zoomlion Exhibition Stall",
     cat: "Exhibition Stall",
     image: "/images/homepage/service1.png",
   },
   {
-    title: "Premium Exhibition Build",
-    cat: "Exhibition Stall",
+    title: "German Hanger Structure",
+    cat: "German Hanger",
+    image: "/images/homepage/service2.png",
+  },
+  {
+    title: "Elecrama 2023 Delhi",
+    cat: "German Hanger",
     image: "/images/homepage/about_mec.png",
   },
   {
-    title: "Large Scale Event Setup",
-    cat: "German Hanger",
+    title: "Smart Energiplus Stall",
+    cat: "Octanorm",
+    image: "/images/homepage/service3.png",
+  },
+  {
+    title: "Salvator Octanorm Stall",
+    cat: "Octanorm",
     image: "/images/homepage/whychoose.png",
+  },
+  {
+    title: "Microtek Octanorm Stall",
+    cat: "Octanorm",
+    image: "/images/homepage/ourwork1.png",
   },
 ];
 
 const filters = ["All Projects", "Exhibition Stall", "German Hanger", "Octanorm"];
 
 export default function PortfolioPage() {
+  const [active, setActive] = useState("All Projects");
+
+  const visibleProjects =
+    active === "All Projects"
+      ? projects
+      : projects.filter((project) => project.cat === active);
+
   return (
     <>
       <section className="relative overflow-hidden bg-[#111111] py-20 lg:py-24">
@@ -56,7 +71,9 @@ export default function PortfolioPage() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10">
           <div className="text-[13px] text-white/35 mb-5">
-            <Link href="/" className="hover:text-white/70">Home</Link>
+            <Link href="/" className="hover:text-white/70">
+              Home
+            </Link>
             <span className="mx-2">/</span>
             <span className="text-white/60">Portfolio</span>
           </div>
@@ -73,7 +90,8 @@ export default function PortfolioPage() {
           </h1>
 
           <p className="mt-4 max-w-xl text-[16px] lg:text-[17px] leading-7 text-white/60">
-            Over 500 stalls designed and built across India. Here is a selection of our favourite projects.
+            Over 500 stalls designed and built across India. Here is a selection
+            of our favourite projects.
           </p>
         </div>
       </section>
@@ -81,13 +99,15 @@ export default function PortfolioPage() {
       <section className="bg-white py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="flex flex-wrap gap-3 mb-10">
-            {filters.map((filter, index) => (
+            {filters.map((filter) => (
               <button
                 key={filter}
-                className={`rounded-full border px-5 py-2.5 text-[13.5px] font-semibold transition ${
-                  index === 0
+                type="button"
+                onClick={() => setActive(filter)}
+                className={`rounded-full border px-6 py-2.5 text-[13.5px] font-semibold transition ${
+                  active === filter
                     ? "bg-[#C41E3A] border-[#C41E3A] text-white"
-                    : "border-[#E5E7EB] text-[#6B7280] hover:bg-[#C41E3A] hover:border-[#C41E3A] hover:text-white"
+                    : "bg-white border-[#E5E7EB] text-[#6B7280] hover:bg-[#C41E3A] hover:border-[#C41E3A] hover:text-white"
                 }`}
               >
                 {filter}
@@ -96,10 +116,10 @@ export default function PortfolioPage() {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {projects.map((project) => (
+            {visibleProjects.map((project) => (
               <article
                 key={project.title}
-                className="group relative h-[250px] rounded-lg overflow-hidden cursor-pointer"
+                className="group relative h-[250px] rounded-lg overflow-hidden bg-[#F4F4F2]"
               >
                 <img
                   src={project.image}
@@ -107,12 +127,12 @@ export default function PortfolioPage() {
                   className="w-full h-full object-cover transition duration-500 group-hover:scale-105"
                 />
 
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/55 transition duration-300 flex flex-col justify-end p-5">
-                  <p className="text-[11px] font-bold tracking-[0.12em] uppercase text-white/70 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition duration-300">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-5">
+                  <p className="text-[11px] font-bold tracking-[0.12em] uppercase text-white/70">
                     {project.cat}
                   </p>
 
-                  <h2 className="mt-1 text-[15px] font-semibold text-white opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition duration-300">
+                  <h2 className="mt-1 text-[15px] font-semibold text-white">
                     {project.title}
                   </h2>
                 </div>
@@ -133,7 +153,8 @@ export default function PortfolioPage() {
             </h2>
 
             <p className="mt-3 max-w-xl mx-auto text-[15px] text-[#6B7280] leading-7">
-              Share your exhibition brief and we will create a custom design for you.
+              Share your exhibition brief and we will create a custom design for
+              you.
             </p>
 
             <Link
