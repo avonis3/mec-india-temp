@@ -32,26 +32,29 @@ export default function ContactPage() {
   const [message, setMessage] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    const whatsappMessage = `*New MEC India Enquiry*
+  if (!name || !phone || !email || !company || !service || !message) {
+    alert("Please fill all fields before sending.");
+    return;
+  }
 
-Name: ${name}
-Phone: ${phone}
-Email: ${email}
-Company: ${company}
-Service: ${service}
+  const whatsappMessage = `*New MEC India Enquiry*
 
-Message:
+*Name:* ${name}
+*Phone:* ${phone}
+*Email:* ${email}
+*Company:* ${company}
+*Service Interested In:* ${service}
+
+*Message:*
 ${message}`;
 
-    window.open(
-      `https://wa.me/919920328287?text=${encodeURIComponent(
-        whatsappMessage
-      )}`,
-      "_blank"
-    );
-  };
+  window.open(
+    `https://wa.me/919920328287?text=${encodeURIComponent(whatsappMessage)}`,
+    "_blank"
+  );
+};
 
   return (
     <>
@@ -187,6 +190,7 @@ ${message}`;
                   Service Interested In
                 </label>
                 <select
+                required
                   value={service}
                   onChange={(e) => setService(e.target.value)}
                   className="w-full rounded-md border border-[#E5E7EB] bg-[#F4F4F2] px-4 py-3 text-[14px] outline-none focus:border-[#C41E3A]"
@@ -206,6 +210,7 @@ ${message}`;
                   Your Message
                 </label>
                 <textarea
+                required
                   rows={6}
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
@@ -304,6 +309,7 @@ function Field({
         {label}
       </label>
       <input
+        required
         type={type}
         value={value}
         onChange={(e) => onChange(e.target.value)}
