@@ -66,15 +66,15 @@ export default function Hero() {
           </div>
 
           {/* DESKTOP IMAGE ONLY */}
-          <div className="hidden lg:block relative h-[560px] -ml-20 -mr-24">
-            <img
-              src="/images/homepage/hero-banner.png"
-              alt="MEC India Exhibition Stall"
-              className="absolute inset-0 w-full h-full object-cover object-center"
-            />
+<div className="hidden lg:block relative h-[560px] -ml-36 -mr-10">
+  <img
+    src="/images/homepage/hero-banner.png"
+    alt="MEC India Exhibition Stall"
+    className="absolute inset-0 w-full h-full object-cover object-left"
+  />
 
-            <div className="absolute inset-0 bg-gradient-to-r from-[#07111f] via-[#07111f]/14 to-transparent" />
-          </div>
+  <div className="absolute inset-0 bg-gradient-to-r from-[#07111f] via-[#07111f]/14 to-transparent" />
+</div>
         </div>
       </div>
     </section>
