@@ -8,22 +8,26 @@ const stats = [
 ];
 
 const values = [
-  [
-    "Innovation",
-    "We bring fresh ideas to every brief, designing stalls that stand apart from the crowd.",
-  ],
-  [
-    "Quality",
-    "No shortcuts. We use premium materials and skilled craftsmen on every project.",
-  ],
-  [
-    "Reliability",
-    "Deadlines are sacred to us. Our clients rely on us to deliver, and we always do.",
-  ],
-  [
-    "Client Focus",
-    "Your success at the exhibition is our success. We work as a true partner, not just a vendor.",
-  ],
+  {
+    title: "Innovation",
+    desc: "We bring fresh ideas to every brief, designing stalls that stand apart from the crowd.",
+    image: "/images/about/innovation.jpg",
+  },
+  {
+    title: "Quality",
+    desc: "No shortcuts. We use premium materials and skilled craftsmen on every project.",
+    image: "/images/about/quality.jpg",
+  },
+  {
+    title: "Reliability",
+    desc: "Deadlines are sacred to us. Our clients rely on us to deliver, and we always do.",
+    image: "/images/about/reliability.jpg",
+  },
+  {
+    title: "Client Focus",
+    desc: "Your success at the exhibition is our success. We work as a true partner, not just a vendor.",
+    image: "/images/about/clientFocus.jpg",
+  },
 ];
 
 export default function AboutPage() {
@@ -154,30 +158,38 @@ export default function AboutPage() {
             <h2 className="text-[34px] sm:text-[40px] lg:text-[48px] font-extrabold leading-[1.1] tracking-[-0.02em] text-[#111111]">
               Our core values
             </h2>
-
+            
             <p className="mt-4 text-[#6B7280]">
               These are the principles that guide every project we take on.
             </p>
           </div>
 
           <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {values.map(([title, desc]) => (
-              <div
-                key={title}
-                className="bg-white border border-[#E5E7EB] rounded-[10px] p-8 text-center hover:-translate-y-1 hover:shadow-[0_8px_40px_rgba(0,0,0,0.10)] transition"
-              >
-                <div className="mx-auto mb-6 w-14 h-14 rounded-xl bg-red-50" />
+  {values.map((item) => (
+    <div
+      key={item.title}
+      className="group bg-white border border-[#E5E7EB] rounded-[14px] overflow-hidden hover:-translate-y-1 hover:shadow-[0_12px_45px_rgba(0,0,0,0.12)] transition duration-300"
+    >
+      <div className="h-[190px] overflow-hidden bg-[#E5E7EB]">
+        <img
+          src={item.image}
+          alt={item.title}
+          className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+        />
+      </div>
 
-                <h3 className="text-[18px] font-bold text-[#111111] mb-4">
-                  {title}
-                </h3>
+      <div className="p-7 text-center">
+        <h3 className="text-[18px] font-bold text-[#111111] mb-4">
+          {item.title}
+        </h3>
 
-                <p className="text-[14.5px] text-[#4B5563] leading-7">
-                  {desc}
-                </p>
-              </div>
-            ))}
-          </div>
+        <p className="text-[14.5px] text-[#4B5563] leading-7">
+          {item.desc}
+        </p>
+      </div>
+    </div>
+  ))}
+</div>
         </div>
       </section>
     </>

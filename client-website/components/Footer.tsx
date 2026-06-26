@@ -1,5 +1,18 @@
 import Link from "next/link";
 
+const socialLinks = [
+  {
+    label: "in",
+    href: "https://www.linkedin.com/company/mec-india",
+    aria: "LinkedIn",
+  },
+  {
+    label: "wa",
+    href: "https://wa.me/919920328287",
+    aria: "WhatsApp",
+  },
+];
+
 export default function Footer() {
   return (
     <footer className="bg-[#0D0D0D] pt-16 lg:pt-20 pb-8">
@@ -18,13 +31,16 @@ export default function Footer() {
             </p>
 
             <div className="flex gap-3 mt-7">
-              {["fb", "in", "ig", "yt", "wa"].map((item) => (
+              {socialLinks.map((item) => (
                 <a
-                  key={item}
-                  href="#"
+                  key={item.label}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={item.aria}
                   className="w-9 h-9 rounded-md border border-white/10 flex items-center justify-center text-[12px] font-semibold text-white/35 hover:bg-[#C41E3A] hover:border-[#C41E3A] hover:text-white transition"
                 >
-                  {item}
+                  {item.label}
                 </a>
               ))}
             </div>
@@ -94,9 +110,18 @@ export default function Footer() {
 
         <div className="pt-7 flex flex-col sm:flex-row justify-between gap-3 text-[12.5px] text-white/20">
           <p>
-            2024 MEC India, Materialistic Exhibitors Collection LLP. All rights reserved.
+            2024 MEC India, Materialistic Exhibitors Collection LLP. All rights
+            reserved.
           </p>
-          <p>www.mecindia.co.in</p>
+
+          <a
+            href="https://www.mecindia.co.in"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-white/45 transition"
+          >
+            www.mecindia.co.in
+          </a>
         </div>
       </div>
     </footer>
