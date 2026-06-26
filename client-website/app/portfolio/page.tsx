@@ -66,7 +66,7 @@ export default function PortfolioPage() {
       <section className="relative overflow-hidden bg-[#111111] py-20 lg:py-24">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-15"
-          style={{ backgroundImage: "url('/images/homepage/ourwork1.png')" }}
+          style={{ backgroundImage: "url('/images/homepage/ourwork3.png')" }}
         />
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10">
