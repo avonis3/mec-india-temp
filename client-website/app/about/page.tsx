@@ -105,19 +105,27 @@ export default function AboutPage() {
           </div>
 
           <div className="relative">
-            <img
-              src="/images/homepage/whychoose.png"
-              alt="About MEC India"
-              className="w-full aspect-[4/3] object-cover rounded-[10px]"
-            />
+  <img
+    src="/images/homepage/about_mec.png"
+    alt="MEC India exhibition stall"
+    className="w-full aspect-[4/3] object-cover rounded-[10px]"
+  />
 
-            <div className="hidden sm:block absolute -bottom-5 -left-5 bg-[#C41E3A] text-white px-6 py-5 rounded-lg shadow-xl">
-              <div className="text-4xl font-extrabold leading-none">20+</div>
-              <div className="mt-1 text-[11px] font-semibold tracking-[0.08em] uppercase opacity-80">
-                Years Experience
-              </div>
-            </div>
-          </div>
+  <div className="absolute -bottom-5 -right-5 w-[46%] rounded-[10px] border-[8px] border-white overflow-hidden shadow-xl">
+    <img
+      src="/images/homepage/whychoose.png"
+      alt="MEC India team"
+      className="w-full aspect-[4/3] object-cover"
+    />
+  </div>
+
+  <div className="absolute -bottom-5 -left-5 bg-[#C41E3A] text-white px-6 py-5 rounded-lg shadow-xl">
+    <div className="text-4xl font-extrabold leading-none">15+</div>
+    <div className="mt-1 text-[11px] font-semibold tracking-[0.08em] uppercase opacity-90">
+      Years of Excellence
+    </div>
+  </div>
+</div>
         </div>
       </section>
 
