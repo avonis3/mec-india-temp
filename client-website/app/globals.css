@@ -391,3 +391,31 @@ footer h3 {
     transform: translateX(-50%);
   }
 }
+
+.prose-content h2 {
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.45rem;
+  line-height: 1.25;
+  font-weight: 800;
+  color: #111111;
+  letter-spacing: -0.02em;
+}
+
+.prose-content p {
+  margin-top: 1rem;
+  font-size: 1rem;
+  line-height: 1.9;
+  color: #374151;
+}
+
+@media (max-width: 640px) {
+  .prose-content h2 {
+    font-size: 1.25rem;
+  }
+
+  .prose-content p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+  }
+}

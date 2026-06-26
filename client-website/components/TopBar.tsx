@@ -12,9 +12,14 @@ export default function TopBar() {
         </div>
 
         <div className="flex gap-5">
-          <a className="text-white/60 hover:text-white" href="#">Instagram</a>
-          <a className="text-white/60 hover:text-white" href="#">LinkedIn</a>
-          <a className="text-white/60 hover:text-white" href="#">Facebook</a>
+          <a
+  className="text-white/60 hover:text-white"
+  href="https://www.linkedin.com/company/mec-india/"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  LinkedIn
+</a>
         </div>
       </div>
     </div>

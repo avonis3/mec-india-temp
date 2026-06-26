@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
+import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
 const projects = [
   {
@@ -55,11 +56,54 @@ const filters = ["All Projects", "Exhibition Stall", "German Hanger", "Octanorm"
 
 export default function PortfolioPage() {
   const [active, setActive] = useState("All Projects");
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
   const visibleProjects =
     active === "All Projects"
       ? projects
       : projects.filter((project) => project.cat === active);
+
+  const selectedProject =
+    selectedIndex !== null ? visibleProjects[selectedIndex] : null;
+
+  const closeLightbox = () => setSelectedIndex(null);
+
+  const showPrev = () => {
+    if (selectedIndex === null) return;
+    setSelectedIndex(
+      selectedIndex === 0 ? visibleProjects.length - 1 : selectedIndex - 1
+    );
+  };
+
+  const showNext = () => {
+    if (selectedIndex === null) return;
+    setSelectedIndex(
+      selectedIndex === visibleProjects.length - 1 ? 0 : selectedIndex + 1
+    );
+  };
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (selectedIndex === null) return;
+
+      if (e.key === "Escape") closeLightbox();
+      if (e.key === "ArrowLeft") showPrev();
+      if (e.key === "ArrowRight") showNext();
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    if (selectedIndex !== null) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = "";
+    };
+  }, [selectedIndex, visibleProjects.length]);
 
   return (
     <>
@@ -103,7 +147,10 @@ export default function PortfolioPage() {
               <button
                 key={filter}
                 type="button"
-                onClick={() => setActive(filter)}
+                onClick={() => {
+                  setActive(filter);
+                  setSelectedIndex(null);
+                }}
                 className={`rounded-full border px-6 py-2.5 text-[13.5px] font-semibold transition ${
                   active === filter
                     ? "bg-[#C41E3A] border-[#C41E3A] text-white"
@@ -116,10 +163,13 @@ export default function PortfolioPage() {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {visibleProjects.map((project) => (
-              <article
-                key={project.title}
-                className="group relative h-[250px] rounded-lg overflow-hidden bg-[#F4F4F2]"
+            {visibleProjects.map((project, index) => (
+              <button
+                key={`${project.title}-${index}`}
+                type="button"
+                onClick={() => setSelectedIndex(index)}
+                className="group relative h-[250px] rounded-lg overflow-hidden bg-[#F4F4F2] text-left cursor-zoom-in"
+                aria-label={`Open ${project.title}`}
               >
                 <img
                   src={project.image}
@@ -135,8 +185,12 @@ export default function PortfolioPage() {
                   <h2 className="mt-1 text-[15px] font-semibold text-white">
                     {project.title}
                   </h2>
+
+                  <p className="mt-3 text-[12px] text-white/70">
+                    Click to enlarge
+                  </p>
                 </div>
-              </article>
+              </button>
             ))}
           </div>
 
@@ -166,6 +220,88 @@ export default function PortfolioPage() {
           </div>
         </div>
       </section>
+
+      {selectedProject && (
+        <div
+          className="fixed inset-0 z-[9999] bg-black/90 px-4 py-6 flex items-center justify-center"
+          onClick={closeLightbox}
+        >
+          <button
+            type="button"
+            onClick={closeLightbox}
+            className="absolute top-5 right-5 w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition"
+            aria-label="Close image"
+          >
+            <X size={24} />
+          </button>
+
+          <button
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              showPrev();
+            }}
+            className="hidden sm:flex absolute left-5 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 text-white items-center justify-center transition"
+            aria-label="Previous image"
+          >
+            <ChevronLeft size={28} />
+          </button>
+
+          <button
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              showNext();
+            }}
+            className="hidden sm:flex absolute right-5 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 text-white items-center justify-center transition"
+            aria-label="Next image"
+          >
+            <ChevronRight size={28} />
+          </button>
+
+          <div
+            className="w-full max-w-6xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="bg-white rounded-xl overflow-hidden shadow-2xl">
+              <img
+                src={selectedProject.image}
+                alt={selectedProject.title}
+                className="w-full max-h-[75vh] object-contain bg-black"
+              />
+
+              <div className="px-5 py-4 bg-white">
+                <p className="text-[11px] font-bold tracking-[0.12em] uppercase text-[#C41E3A]">
+                  {selectedProject.cat}
+                </p>
+                <h2 className="mt-1 text-[18px] font-bold text-[#111111]">
+                  {selectedProject.title}
+                </h2>
+              </div>
+            </div>
+
+            <div className="sm:hidden mt-4 flex justify-center gap-3">
+              <button
+                type="button"
+                onClick={showPrev}
+                className="w-12 h-12 rounded-full bg-white/10 text-white flex items-center justify-center"
+                aria-label="Previous image"
+              >
+                <ChevronLeft size={26} />
+              </button>
+
+              <button
+                type="button"
+                onClick={showNext}
+                className="w-12 h-12 rounded-full bg-white/10 text-white flex items-center justify-center"
+                aria-label="Next image"
+              >
+                <ChevronRight size={26} />
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 }

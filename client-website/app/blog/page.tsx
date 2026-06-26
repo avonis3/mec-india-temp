@@ -8,7 +8,7 @@ const blogs = [
     excerpt:
       "Why food handlers should undergo medical screening before employment and how it helps maintain hygiene and workplace safety.",
     image: "/images/homepage/service1.png",
-    href: "/blog/pre-employment-food-handlers",
+    href: "/blog/blog1"
   },
   {
     title: "Blood Lead Test: Meaning, Importance, and When It Is Needed",
@@ -17,7 +17,7 @@ const blogs = [
     excerpt:
       "A simple guide to blood lead testing, who needs it, and why regular monitoring matters in high-risk work environments.",
     image: "/images/homepage/service2.png",
-    href: "/blog/blood-lead-test",
+    href: "/blog/blog2",
   },
   {
     title: "Why Annual Medical Check-up Is Essential in Factories",
@@ -26,7 +26,7 @@ const blogs = [
     excerpt:
       "Annual check-ups help detect early health risks, support compliance, and protect factory workers from occupational illnesses.",
     image: "/images/homepage/service3.png",
-    href: "/blog/factory-medical-checkups",
+    href: "/blog/blog3",
   },
   {
     title: "Stress Management in IT Companies",
@@ -35,7 +35,7 @@ const blogs = [
     excerpt:
       "Practical ways companies can identify workplace stress and support employee wellbeing in high-pressure IT environments.",
     image: "/images/homepage/ourwork1.png",
-    href: "/blog/stress-management-it",
+    href: "/blog/blog4",
   },
   {
     title: "Why Vitamin B12 and Vitamin D Tests Should Be Done Regularly",
@@ -44,7 +44,7 @@ const blogs = [
     excerpt:
       "Vitamin deficiencies are common and often ignored. Regular testing can help detect problems before symptoms become severe.",
     image: "/images/homepage/ourwork2.png",
-    href: "/blog/vitamin-b12-vitamin-d",
+    href: "/blog/blog5",
   },
 ];
 
