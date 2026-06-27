@@ -39,7 +39,7 @@ export default function PortfolioPreview() {
 
 function ProjectCard({ project, large = false }: { project: { title: string; image: string }; large?: boolean }) {
   return (
-    <div className={`relative overflow-hidden rounded-lg group ${large ? "h-[450px]" : "h-[217px]"}`}>
+    <div className={`relative overflow-hidden rounded-lg group h-[360px] lg:${large ? "h-[450px]" : "h-[217px]"}`}>
       <img src={project.image} alt={project.title} className="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-5">
         <span className="text-white font-semibold">{project.title}</span>

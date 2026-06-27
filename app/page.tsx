@@ -20,8 +20,8 @@ export default function Home() {
       <PortfolioPreview />
       <WhyUs />
       <ProcessSection />
-      <IndustriesSection />
-      <ContactSection />
+      {/* <IndustriesSection /> */}
+      {/* <ContactSection /> */}
     </>
   );
 }

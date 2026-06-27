@@ -8,7 +8,7 @@ export default function StatsStrip() {
 
   return (
     <section className="bg-[#111111]">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 py-10 lg:py-12 grid grid-cols-2 lg:grid-cols-4 gap-y-8">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10 py-10 lg:py-12 grid grid-cols-2 lg:grid-cols-4 gap-y-8 text-center lg:text-left">
         {stats.map(([num, label], index) => (
           <div
             key={label}
