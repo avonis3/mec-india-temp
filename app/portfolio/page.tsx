@@ -32,7 +32,7 @@ const projects = [
   },
   {
     title: "Elecrama 2023 Delhi",
-    cat: "German Hanger",
+    cat: "Exhibition Stall",
     image: "/images/homepage/about_mec.png",
   },
   {
