@@ -32,7 +32,7 @@ const projects = [
   },
   {
     title: "Elecrama 2023 Delhi",
-    cat: "Exhibition Stall",
+    cat: "German Hanger",
     image: "/images/homepage/about_mec.png",
   },
   {
@@ -270,14 +270,7 @@ export default function PortfolioPage() {
                 className="w-full max-h-[75vh] object-contain bg-black"
               />
 
-              <div className="px-5 py-4 bg-white">
-                <p className="text-[11px] font-bold tracking-[0.12em] uppercase text-[#C41E3A]">
-                  {selectedProject.cat}
-                </p>
-                <h2 className="mt-1 text-[18px] font-bold text-[#111111]">
-                  {selectedProject.title}
-                </h2>
-              </div>
+              
             </div>
 
             <div className="sm:hidden mt-4 flex justify-center gap-3">
