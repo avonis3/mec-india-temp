@@ -13,17 +13,17 @@ const projects = [
   {
     title: "Chemtech 2023 Mumbai",
     cat: "Exhibition Stall",
-    image: "/images/homepage/ourwork2.png",
+    image: "/images/homepage/service1.png",
   },
   {
     title: "Lalbaba Engineering Stall",
     cat: "Exhibition Stall",
-    image: "/images/homepage/ourwork3.png",
+    image: "/images/homepage/ourwork2.png",
   },
   {
     title: "Zoomlion Exhibition Stall",
     cat: "Exhibition Stall",
-    image: "/images/homepage/service1.png",
+    image: "/images/homepage/ourwork3.png",
   },
   {
     title: "German Hanger Structure",

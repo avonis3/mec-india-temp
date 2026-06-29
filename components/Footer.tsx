@@ -97,9 +97,6 @@ export default function Footer() {
               <a href="tel:+919920328287" className="hover:text-white">
                 +91 9920 328 287
               </a>
-              <a href="tel:+919769381737" className="hover:text-white">
-                +91 9769 381 737
-              </a>
               <a href="mailto:sales@mecindia.co.in" className="hover:text-white">
                 sales@mecindia.co.in
               </a>
