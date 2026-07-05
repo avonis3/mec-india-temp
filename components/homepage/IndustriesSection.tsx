@@ -21,7 +21,7 @@ export default function IndustriesSection() {
           {industries.map((industry) => (
             <span
               key={industry}
-              className="border border-white/10 text-white/60 rounded-full px-4 py-2 text-[13px] hover:bg-[#C41E3A] hover:border-[#C41E3A] hover:text-white transition"
+              className="border border-white/10 text-white/60 rounded-full px-4 py-2 text-[13px] hover:bg-[var(--accent)] hover:border-[var(--accent)] hover:text-white transition"
             >
               {industry}
             </span>

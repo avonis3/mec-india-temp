@@ -67,7 +67,7 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-2 text-[15px] font-semibold text-gray-700">
           <Link
             className={`px-4 py-3 transition ${
-              isActive("/") ? "text-[#C41E3A]" : "hover:text-[#C41E3A]"
+              isActive("/") ? "text-[var(--accent)]" : "hover:text-[var(--accent)]"
             }`}
             href="/"
           >
@@ -76,7 +76,7 @@ export default function Navbar() {
 
           <Link
             className={`px-4 py-3 transition ${
-              isActive("/about") ? "text-[#C41E3A]" : "hover:text-[#C41E3A]"
+              isActive("/about") ? "text-[var(--accent)]" : "hover:text-[var(--accent)]"
             }`}
             href="/about"
           >
@@ -88,8 +88,8 @@ export default function Navbar() {
               href="/services"
               className={`flex items-center gap-1 px-4 py-3 rounded-md transition ${
                 servicesActive
-                  ? "text-[#C41E3A] bg-gray-50"
-                  : "hover:text-[#C41E3A] hover:bg-gray-50"
+                  ? "text-[var(--accent)] bg-gray-50"
+                  : "hover:text-[var(--accent)] hover:bg-gray-50"
               }`}
             >
               Our Services
@@ -116,8 +116,8 @@ export default function Navbar() {
                       <span
                         className={`w-10 h-10 rounded-lg flex items-center justify-center shrink-0 ${
                           active
-                            ? "bg-[#C41E3A] text-white"
-                            : "bg-gray-100 text-[#C41E3A]"
+                            ? "bg-[var(--accent)] text-white"
+                            : "bg-gray-100 text-[var(--accent)]"
                         }`}
                       >
                         <Icon size={18} />
@@ -126,7 +126,7 @@ export default function Navbar() {
                       <span>
                         <span
                           className={`block text-[14px] font-bold leading-snug ${
-                            active ? "text-[#C41E3A]" : "text-gray-800"
+                            active ? "text-[var(--accent)]" : "text-gray-800"
                           }`}
                         >
                           {item.title}
@@ -147,8 +147,8 @@ export default function Navbar() {
               key={link.href}
               className={`px-4 py-3 transition ${
                 isActive(link.href)
-                  ? "text-[#C41E3A]"
-                  : "hover:text-[#C41E3A]"
+                  ? "text-[var(--accent)]"
+                  : "hover:text-[var(--accent)]"
               }`}
               href={link.href}
             >
@@ -158,7 +158,7 @@ export default function Navbar() {
 
           <Link
             href="/contact"
-            className="ml-4 bg-[#C41E3A] text-white px-7 py-4 rounded-md hover:bg-[#A0182F] transition"
+            className="ml-4 bg-[var(--accent)] text-white px-7 py-4 rounded-md hover:bg-[var(--primary-dark)] transition"
           >
             Get Free Quote
           </Link>
@@ -205,7 +205,7 @@ export default function Navbar() {
                 onClick={() => setOpen(false)}
                 className={`px-4 py-3 rounded-md ${
                   servicesActive
-                    ? "text-[#C41E3A] bg-red-50"
+                    ? "text-[var(--accent)] bg-red-50"
                     : "text-gray-700 hover:bg-gray-50"
                 }`}
               >
@@ -220,7 +220,7 @@ export default function Navbar() {
                     onClick={() => setOpen(false)}
                     className={`block px-4 py-2 rounded-md text-[14px] ${
                       isActive(item.href)
-                        ? "text-[#C41E3A] bg-red-50"
+                        ? "text-[var(--accent)] bg-red-50"
                         : "text-gray-600 hover:bg-gray-50"
                     }`}
                   >
@@ -236,7 +236,7 @@ export default function Navbar() {
               <Link
                 href="/contact"
                 onClick={() => setOpen(false)}
-                className="mt-4 bg-[#C41E3A] text-white text-center px-6 py-3.5 rounded-md hover:bg-[#A0182F] transition"
+                className="mt-4 bg-[var(--accent)] text-white text-center px-6 py-3.5 rounded-md hover:bg-[var(--primary-dark)] transition"
               >
                 Get Free Quote
               </Link>
@@ -265,7 +265,7 @@ function MobileLink({
       onClick={onClick}
       className={`px-4 py-3 rounded-md ${
         active
-          ? "text-[#C41E3A] bg-red-50"
+          ? "text-[var(--accent)] bg-red-50"
           : "text-gray-700 hover:bg-gray-50"
       }`}
     >

@@ -33,8 +33,8 @@ export default function ServicesSection() {
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="mb-10 lg:mb-12">
           <div className="flex items-center gap-2 mb-4">
-            <span className="w-5 h-[2px] bg-[#C41E3A]" />
-            <p className="text-[12px] font-semibold tracking-[0.12em] uppercase text-[#C41E3A]">Our Services</p>
+            <span className="w-5 h-[2px] bg-[var(--accent)]" />
+            <p className="text-[12px] font-semibold tracking-[0.12em] uppercase text-[var(--accent)]">Our Services</p>
           </div>
 
           <h2 className="text-[30px] sm:text-[36px] lg:text-[44px] font-extrabold leading-[1.1] tracking-[-0.02em] text-[#111111]">
@@ -52,7 +52,7 @@ export default function ServicesSection() {
               <img src={service.img} alt={service.title} className="w-full h-[220px] object-cover" />
 
               <div className="p-7">
-                <p className="text-[12px] font-bold tracking-[0.1em] uppercase text-[#C41E3A] mb-2">{service.num}</p>
+                <p className="text-[12px] font-bold tracking-[0.1em] uppercase text-[var(--accent)] mb-2">{service.num}</p>
                 <h3 className="text-xl font-bold leading-snug text-[#111111] mb-3">{service.title}</h3>
                 <p className="text-[14.5px] text-[#4B5563] leading-7 mb-5">{service.desc}</p>
 
@@ -62,7 +62,7 @@ export default function ServicesSection() {
                   ))}
                 </div>
 
-                <Link href={service.href} className="inline-flex text-[13.5px] font-semibold text-[#C41E3A]">
+                <Link href={service.href} className="inline-flex text-[13.5px] font-semibold text-[var(--accent)]">
                   Learn More →
                 </Link>
               </div>

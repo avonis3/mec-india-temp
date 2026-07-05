@@ -74,8 +74,8 @@ ${message}`;
           </div>
 
           <div className="flex items-center gap-2 mb-4">
-            <span className="w-5 h-[2px] bg-[#C41E3A]" />
-            <p className="text-[12px] font-semibold tracking-[0.14em] uppercase text-[#C41E3A]">
+            <span className="w-5 h-[2px] bg-[var(--accent)]" />
+            <p className="text-[12px] font-semibold tracking-[0.14em] uppercase text-[var(--accent)]">
               Get in Touch
             </p>
           </div>
@@ -95,8 +95,8 @@ ${message}`;
         <div className="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-[0.9fr_1.1fr] gap-12 lg:gap-16 items-start">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <span className="w-5 h-[2px] bg-[#C41E3A]" />
-              <p className="text-[12px] font-semibold tracking-[0.12em] uppercase text-[#C41E3A]">
+              <span className="w-5 h-[2px] bg-[var(--accent)]" />
+              <p className="text-[12px] font-semibold tracking-[0.12em] uppercase text-[var(--accent)]">
                 Our Details
               </p>
             </div>
@@ -193,7 +193,7 @@ ${message}`;
                 required
                   value={service}
                   onChange={(e) => setService(e.target.value)}
-                  className="w-full rounded-md border border-[#E5E7EB] bg-[#F4F4F2] px-4 py-3 text-[14px] outline-none focus:border-[#C41E3A]"
+                  className="w-full rounded-md border border-[#E5E7EB] bg-[#F4F4F2] px-4 py-3 text-[14px] outline-none focus:border-[var(--accent)]"
                 >
                   <option value="">Select a service</option>
                   <option>Exhibition Stall Design</option>
@@ -215,13 +215,13 @@ ${message}`;
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   placeholder="Tell us about your project, stall size, exhibition name, venue, and timeline..."
-                  className="w-full rounded-md border border-[#E5E7EB] bg-[#F4F4F2] px-4 py-3 text-[14px] outline-none focus:border-[#C41E3A]"
+                  className="w-full rounded-md border border-[#E5E7EB] bg-[#F4F4F2] px-4 py-3 text-[14px] outline-none focus:border-[var(--accent)]"
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-[#C41E3A] hover:bg-[#A0182F] transition text-white py-3.5 rounded-md text-[15px] font-semibold"
+                className="w-full bg-[var(--accent)] hover:bg-[var(--primary-dark)] transition text-white py-3.5 rounded-md text-[15px] font-semibold"
               >
                 Send Message on WhatsApp
               </button>
@@ -234,8 +234,8 @@ ${message}`;
         <div className="max-w-4xl mx-auto px-6 lg:px-10">
           <div className="text-center mb-10">
             <div className="inline-flex items-center gap-2 mb-4">
-              <span className="w-5 h-[2px] bg-[#C41E3A]" />
-              <p className="text-[12px] font-semibold tracking-[0.12em] uppercase text-[#C41E3A]">
+              <span className="w-5 h-[2px] bg-[var(--accent)]" />
+              <p className="text-[12px] font-semibold tracking-[0.12em] uppercase text-[var(--accent)]">
                 FAQ
               </p>
             </div>
@@ -275,7 +275,7 @@ function ContactItem({
 }) {
   return (
     <div className="flex gap-4 items-start">
-      <div className="w-11 h-11 rounded-lg bg-red-50 text-[#C41E3A] flex items-center justify-center shrink-0">
+      <div className="w-11 h-11 rounded-lg bg-red-50 text-[var(--accent)] flex items-center justify-center shrink-0">
         {icon}
       </div>
       <div>
@@ -314,7 +314,7 @@ function Field({
         value={value}
         onChange={(e) => onChange(e.target.value)}
         placeholder={placeholder}
-        className="w-full rounded-md border border-[#E5E7EB] bg-[#F4F4F2] px-4 py-3 text-[14px] outline-none focus:border-[#C41E3A]"
+        className="w-full rounded-md border border-[#E5E7EB] bg-[#F4F4F2] px-4 py-3 text-[14px] outline-none focus:border-[var(--accent)]"
       />
     </div>
   );

@@ -38,7 +38,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={item.aria}
-                  className="w-9 h-9 rounded-md border border-white/10 flex items-center justify-center text-[12px] font-semibold text-white/35 hover:bg-[#C41E3A] hover:border-[#C41E3A] hover:text-white transition"
+                  className="w-9 h-9 rounded-md border border-white/10 flex items-center justify-center text-[12px] font-semibold text-white/35 hover:bg-[var(--accent)] hover:border-[var(--accent)] hover:text-white transition"
                 >
                   {item.label}
                 </a>

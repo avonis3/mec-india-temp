@@ -6,8 +6,8 @@ export default function ContactSection() {
       <div className="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-[0.9fr_1.1fr] gap-12 lg:gap-16 items-start">
         <div>
           <div className="flex items-center gap-2 mb-4">
-            <span className="w-5 h-[2px] bg-[#C41E3A]" />
-            <p className="text-[12px] font-semibold tracking-[0.12em] uppercase text-[#C41E3A]">
+            <span className="w-5 h-[2px] bg-[var(--accent)]" />
+            <p className="text-[12px] font-semibold tracking-[0.12em] uppercase text-[var(--accent)]">
               Get In Touch
             </p>
           </div>
@@ -52,7 +52,7 @@ export default function ContactSection() {
                 <label className="block mb-2 text-[13px] font-semibold text-[#111827]">
                   Service Required
                 </label>
-                <select className="w-full rounded-md border border-[#E5E7EB] bg-[#F4F4F2] px-4 py-3 text-[14px] outline-none focus:border-[#C41E3A]">
+                <select className="w-full rounded-md border border-[#E5E7EB] bg-[#F4F4F2] px-4 py-3 text-[14px] outline-none focus:border-[var(--accent)]">
                   <option>Select a service</option>
                   <option>Exhibition Stall Design</option>
                   <option>German Hanger Structure</option>
@@ -68,13 +68,13 @@ export default function ContactSection() {
               <textarea
                 rows={5}
                 placeholder="Stall size, venue, exhibition date, special requirements..."
-                className="w-full rounded-md border border-[#E5E7EB] bg-[#F4F4F2] px-4 py-3 text-[14px] outline-none focus:border-[#C41E3A]"
+                className="w-full rounded-md border border-[#E5E7EB] bg-[#F4F4F2] px-4 py-3 text-[14px] outline-none focus:border-[var(--accent)]"
               />
             </div>
 
             <button
               type="submit"
-              className="w-full bg-[#C41E3A] hover:bg-[#A0182F] transition text-white py-3.5 rounded-md text-[15px] font-semibold"
+              className="w-full bg-[var(--accent)] hover:bg-[var(--primary-dark)] transition text-white py-3.5 rounded-md text-[15px] font-semibold"
             >
               Send Enquiry
             </button>
@@ -96,7 +96,7 @@ function ContactItem({
 }) {
   return (
     <div className="flex gap-4 items-start">
-      <div className="w-11 h-11 rounded-lg bg-white border border-[#E5E7EB] text-[#C41E3A] flex items-center justify-center shrink-0">
+      <div className="w-11 h-11 rounded-lg bg-white border border-[#E5E7EB] text-[var(--accent)] flex items-center justify-center shrink-0">
         {icon}
       </div>
 
@@ -120,7 +120,7 @@ function Field({ label, placeholder }: { label: string; placeholder: string }) {
       </label>
       <input
         placeholder={placeholder}
-        className="w-full rounded-md border border-[#E5E7EB] bg-[#F4F4F2] px-4 py-3 text-[14px] outline-none focus:border-[#C41E3A]"
+        className="w-full rounded-md border border-[#E5E7EB] bg-[#F4F4F2] px-4 py-3 text-[14px] outline-none focus:border-[var(--accent)]"
       />
     </div>
   );

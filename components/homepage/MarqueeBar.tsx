@@ -10,7 +10,7 @@ const items = [
 
 export default function MarqueeBar() {
   return (
-    <section className="bg-[#C41E3A] overflow-hidden py-3">
+    <section className="bg-[var(--accent)] overflow-hidden py-3">
       <div className="flex whitespace-nowrap animate-[marquee_28s_linear_infinite]">
         {[...items, ...items].map((item, index) => (
           <span

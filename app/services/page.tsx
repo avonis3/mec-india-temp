@@ -77,8 +77,8 @@ export default function ServicesPage() {
           </div>
 
           <div className="flex items-center gap-2 mb-4">
-            <span className="w-5 h-[2px] bg-[#C41E3A]" />
-            <p className="text-[12px] font-semibold tracking-[0.14em] uppercase text-[#C41E3A]">
+            <span className="w-5 h-[2px] bg-[var(--accent)]" />
+            <p className="text-[12px] font-semibold tracking-[0.14em] uppercase text-[var(--accent)]">
               What We Do
             </p>
           </div>
@@ -109,7 +109,7 @@ export default function ServicesPage() {
                 />
 
                 <div className="p-7">
-                  <p className="text-[12px] font-bold tracking-[0.1em] uppercase text-[#C41E3A] mb-2">
+                  <p className="text-[12px] font-bold tracking-[0.1em] uppercase text-[var(--accent)] mb-2">
                     {service.num}
                   </p>
 
@@ -134,7 +134,7 @@ export default function ServicesPage() {
 
                   <Link
                     href={service.href}
-                    className="inline-flex items-center gap-1 text-[13.5px] font-semibold text-[#C41E3A] transition-all group-hover:gap-2"
+                    className="inline-flex items-center gap-1 text-[13.5px] font-semibold text-[var(--accent)] transition-all group-hover:gap-2"
                   >
                     Learn More →
                   </Link>
@@ -146,8 +146,8 @@ export default function ServicesPage() {
           <div className="mt-14 lg:mt-16 bg-[#F4F4F2] rounded-xl p-6 sm:p-8 lg:p-12">
             <div className="text-center max-w-2xl mx-auto mb-10">
               <div className="inline-flex items-center gap-2 mb-4">
-                <span className="w-5 h-[2px] bg-[#C41E3A]" />
-                <p className="text-[12px] font-semibold tracking-[0.12em] uppercase text-[#C41E3A]">
+                <span className="w-5 h-[2px] bg-[var(--accent)]" />
+                <p className="text-[12px] font-semibold tracking-[0.12em] uppercase text-[var(--accent)]">
                   Additional Offerings
                 </p>
               </div>
@@ -166,7 +166,7 @@ export default function ServicesPage() {
                     key={item.title}
                     className="bg-white border border-[#E5E7EB] rounded-lg p-6 flex gap-4 items-start"
                   >
-                    <div className="w-11 h-11 rounded-lg bg-red-50 text-[#C41E3A] flex items-center justify-center shrink-0">
+                    <div className="w-11 h-11 rounded-lg bg-red-50 text-[var(--accent)] flex items-center justify-center shrink-0">
                       <Icon size={20} />
                     </div>
 
@@ -199,7 +199,7 @@ export default function ServicesPage() {
 
           <Link
             href="/contact"
-            className="inline-flex mt-8 bg-[#C41E3A] hover:bg-[#A0182F] text-white px-7 py-3.5 rounded-md text-sm font-semibold transition"
+            className="inline-flex mt-8 bg-[var(--accent)] hover:bg-[var(--primary-dark)] text-white px-7 py-3.5 rounded-md text-sm font-semibold transition"
           >
             Get a Free Consultation
           </Link>

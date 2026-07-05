@@ -51,8 +51,8 @@ export default function AboutPage() {
           </div>
 
           <div className="flex items-center gap-2 mb-4">
-            <span className="w-5 h-[2px] bg-[#C41E3A]" />
-            <p className="text-[12px] font-semibold tracking-[0.14em] uppercase text-[#C41E3A]">
+            <span className="w-5 h-[2px] bg-[var(--accent)]" />
+            <p className="text-[12px] font-semibold tracking-[0.14em] uppercase text-[var(--accent)]">
               Our Story
             </p>
           </div>
@@ -72,8 +72,8 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <span className="w-5 h-[2px] bg-[#C41E3A]" />
-              <p className="text-[12px] font-semibold tracking-[0.12em] uppercase text-[#C41E3A]">
+              <span className="w-5 h-[2px] bg-[var(--accent)]" />
+              <p className="text-[12px] font-semibold tracking-[0.12em] uppercase text-[var(--accent)]">
                 Who We Are
               </p>
             </div>
@@ -119,7 +119,7 @@ export default function AboutPage() {
     />
   </div>
 
-  <div className="absolute -bottom-5 -left-5 bg-[#C41E3A] text-white px-6 py-5 rounded-lg shadow-xl">
+  <div className="absolute -bottom-5 -left-5 bg-[var(--accent)] text-white px-6 py-5 rounded-lg shadow-xl">
     <div className="text-4xl font-extrabold leading-none">15+</div>
     <div className="mt-1 text-[11px] font-semibold tracking-[0.08em] uppercase opacity-90">
       Years of Excellence
@@ -140,7 +140,7 @@ export default function AboutPage() {
             >
               <h2 className="text-[38px] sm:text-[46px] lg:text-[56px] font-extrabold text-white leading-none tracking-[-0.03em]">
                 {num.replace("+", "")}
-                <span className="text-[#C41E3A] text-[0.65em] align-super">
+                <span className="text-[var(--accent)] text-[0.65em] align-super">
                   +
                 </span>
               </h2>
@@ -157,8 +157,8 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="text-center max-w-2xl mx-auto">
             <div className="inline-flex items-center gap-2 mb-4">
-              <span className="w-5 h-[2px] bg-[#C41E3A]" />
-              <p className="text-[12px] font-semibold tracking-[0.12em] uppercase text-[#C41E3A]">
+              <span className="w-5 h-[2px] bg-[var(--accent)]" />
+              <p className="text-[12px] font-semibold tracking-[0.12em] uppercase text-[var(--accent)]">
                 What We Stand For
               </p>
             </div>

@@ -18,7 +18,7 @@ export default function StatsStrip() {
           >
             <h2 className="text-[34px] sm:text-[42px] lg:text-[52px] font-extrabold text-white leading-none tracking-[-0.03em]">
               {num.replace("+", "")}
-              <span className="text-[#C41E3A] text-[0.65em] align-super">
+              <span className="text-[var(--accent)] text-[0.65em] align-super">
                 +
               </span>
             </h2>

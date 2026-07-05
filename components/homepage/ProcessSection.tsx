@@ -10,8 +10,8 @@ export default function ProcessSection() {
     <section className="bg-white py-16 lg:py-24">
       <div className="max-w-7xl mx-auto px-6 lg:px-10 text-center">
         <div className="inline-flex items-center justify-center gap-2 mb-4">
-          <span className="w-5 h-[2px] bg-[#C41E3A]" />
-          <p className="text-[12px] font-semibold tracking-[0.12em] uppercase text-[#C41E3A]">
+          <span className="w-5 h-[2px] bg-[var(--accent)]" />
+          <p className="text-[12px] font-semibold tracking-[0.12em] uppercase text-[var(--accent)]">
             How We Work
           </p>
         </div>
@@ -31,7 +31,7 @@ export default function ProcessSection() {
                 Step {Number(num)}
               </p>
 
-              <div className="mx-auto mt-6 mb-7 flex h-[100px] w-[100px] items-center justify-center rounded-full border border-[#C41E3A] text-[#C41E3A] text-[34px] font-extrabold">
+              <div className="mx-auto mt-6 mb-7 flex h-[100px] w-[100px] items-center justify-center rounded-full border border-[var(--accent)] text-[var(--accent)] text-[34px] font-extrabold">
                 {num}
               </div>
 
@@ -47,7 +47,7 @@ export default function ProcessSection() {
         </div>
 
         <div className="lg:hidden flex justify-center gap-2 -mt-2">
-          <span className="w-7 h-2 rounded-full bg-[#C41E3A]" />
+          <span className="w-7 h-2 rounded-full bg-[var(--accent)]" />
           <span className="w-2 h-2 rounded-full bg-[#CBD5E1]" />
           <span className="w-2 h-2 rounded-full bg-[#CBD5E1]" />
           <span className="w-2 h-2 rounded-full bg-[#CBD5E1]" />
@@ -59,7 +59,7 @@ export default function ProcessSection() {
 
           {steps.map(([num, title, desc]) => (
             <div key={num} className="relative z-10">
-              <div className="mx-auto mb-7 flex h-[70px] w-[70px] items-center justify-center rounded-full border-2 border-[#E5E7EB] bg-white text-lg font-bold text-[#6B7280] transition-all duration-300 hover:bg-[#C41E3A] hover:border-[#C41E3A] hover:text-white cursor-pointer">
+              <div className="mx-auto mb-7 flex h-[70px] w-[70px] items-center justify-center rounded-full border-2 border-[#E5E7EB] bg-white text-lg font-bold text-[#6B7280] transition-all duration-300 hover:bg-[var(--accent)] hover:border-[var(--accent)] hover:text-white cursor-pointer">
                 {num}
               </div>
 

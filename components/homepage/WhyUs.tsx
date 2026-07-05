@@ -13,8 +13,8 @@ export default function WhyUs() {
       <div className="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         <div>
           <div className="flex items-center gap-2 mb-4">
-            <span className="w-5 h-[2px] bg-[#C41E3A]" />
-            <p className="text-[12px] font-semibold tracking-[0.12em] uppercase text-[#C41E3A]">
+            <span className="w-5 h-[2px] bg-[var(--accent)]" />
+            <p className="text-[12px] font-semibold tracking-[0.12em] uppercase text-[var(--accent)]">
               Why Choose Us
             </p>
           </div>
@@ -35,7 +35,7 @@ export default function WhyUs() {
                 key={title as string}
                 className="bg-white border border-[#E5E7EB] rounded-xl p-5 lg:p-6 hover:shadow-md transition flex gap-4 lg:block items-center"
               >
-                <div className="w-16 h-16 lg:w-10 lg:h-10 rounded-xl bg-red-50 mb-0 lg:mb-4 text-[#C41E3A] flex items-center justify-center shrink-0">
+                <div className="w-16 h-16 lg:w-10 lg:h-10 rounded-xl bg-red-50 mb-0 lg:mb-4 text-[var(--accent)] flex items-center justify-center shrink-0">
                   <Icon size={30} className="lg:w-5 lg:h-5" />
                 </div>
 

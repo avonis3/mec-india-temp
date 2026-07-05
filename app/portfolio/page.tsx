@@ -123,8 +123,8 @@ export default function PortfolioPage() {
           </div>
 
           <div className="flex items-center gap-2 mb-4">
-            <span className="w-5 h-[2px] bg-[#C41E3A]" />
-            <p className="text-[12px] font-semibold tracking-[0.14em] uppercase text-[#C41E3A]">
+            <span className="w-5 h-[2px] bg-[var(--accent)]" />
+            <p className="text-[12px] font-semibold tracking-[0.14em] uppercase text-[var(--accent)]">
               Our Work
             </p>
           </div>
@@ -153,8 +153,8 @@ export default function PortfolioPage() {
                 }}
                 className={`rounded-full border px-6 py-2.5 text-[13.5px] font-semibold transition ${
                   active === filter
-                    ? "bg-[#C41E3A] border-[#C41E3A] text-white"
-                    : "bg-white border-[#E5E7EB] text-[#6B7280] hover:bg-[#C41E3A] hover:border-[#C41E3A] hover:text-white"
+                    ? "bg-[var(--accent)] border-[var(--accent)] text-white"
+                    : "bg-white border-[#E5E7EB] text-[#6B7280] hover:bg-[var(--accent)] hover:border-[var(--accent)] hover:text-white"
                 }`}
               >
                 {filter}
@@ -196,8 +196,8 @@ export default function PortfolioPage() {
 
           <div className="mt-16 rounded-xl bg-[#F4F4F2] px-6 py-12 text-center">
             <div className="inline-flex items-center justify-center gap-2 mb-4">
-              <span className="w-5 h-[2px] bg-[#C41E3A]" />
-              <p className="text-[12px] font-semibold tracking-[0.12em] uppercase text-[#C41E3A]">
+              <span className="w-5 h-[2px] bg-[var(--accent)]" />
+              <p className="text-[12px] font-semibold tracking-[0.12em] uppercase text-[var(--accent)]">
                 Start a Project
               </p>
             </div>
@@ -213,7 +213,7 @@ export default function PortfolioPage() {
 
             <Link
               href="/contact"
-              className="inline-flex mt-7 bg-[#C41E3A] hover:bg-[#A0182F] text-white px-7 py-3.5 rounded-md text-sm font-semibold transition"
+              className="inline-flex mt-7 bg-[var(--accent)] hover:bg-[var(--primary-dark)] text-white px-7 py-3.5 rounded-md text-sm font-semibold transition"
             >
               Get a Free Design
             </Link>

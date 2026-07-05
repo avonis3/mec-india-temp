@@ -67,8 +67,8 @@ export default function BlogPage() {
           </div>
 
           <div className="flex items-center gap-2 mb-4">
-            <span className="w-5 h-[2px] bg-[#C41E3A]" />
-            <p className="text-[12px] font-semibold tracking-[0.14em] uppercase text-[#C41E3A]">
+            <span className="w-5 h-[2px] bg-[var(--accent)]" />
+            <p className="text-[12px] font-semibold tracking-[0.14em] uppercase text-[var(--accent)]">
               Insights
             </p>
           </div>
@@ -100,7 +100,7 @@ export default function BlogPage() {
 
                 <div className="p-7">
                   <div className="flex flex-wrap items-center gap-3 mb-4">
-                    <span className="text-[11px] font-bold tracking-[0.12em] uppercase text-[#C41E3A]">
+                    <span className="text-[11px] font-bold tracking-[0.12em] uppercase text-[var(--accent)]">
                       {blog.category}
                     </span>
                     <span className="text-[12px] text-[#6B7280]">
@@ -118,7 +118,7 @@ export default function BlogPage() {
 
                   <Link
                     href={blog.href}
-                    className="inline-flex text-[13.5px] font-semibold text-[#C41E3A]"
+                    className="inline-flex text-[13.5px] font-semibold text-[var(--accent)]"
                   >
                     Read Article →
                   </Link>

@@ -37,8 +37,8 @@ export default function ExhibitionStallPage() {
           </div>
 
           <div className="flex items-center gap-2 mb-4">
-            <span className="w-5 h-[2px] bg-[#C41E3A]" />
-            <p className="text-[12px] font-semibold tracking-[0.14em] uppercase text-[#C41E3A]">
+            <span className="w-5 h-[2px] bg-[var(--accent)]" />
+            <p className="text-[12px] font-semibold tracking-[0.14em] uppercase text-[var(--accent)]">
               Service 01
             </p>
           </div>
@@ -58,8 +58,8 @@ export default function ExhibitionStallPage() {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <span className="w-5 h-[2px] bg-[#C41E3A]" />
-                <p className="text-[12px] font-semibold tracking-[0.12em] uppercase text-[#C41E3A]">
+                <span className="w-5 h-[2px] bg-[var(--accent)]" />
+                <p className="text-[12px] font-semibold tracking-[0.12em] uppercase text-[var(--accent)]">
                   What We Offer
                 </p>
               </div>
@@ -86,8 +86,8 @@ export default function ExhibitionStallPage() {
 
           <div className="mt-16">
             <div className="flex items-center gap-2 mb-4">
-              <span className="w-5 h-[2px] bg-[#C41E3A]" />
-              <p className="text-[12px] font-semibold tracking-[0.12em] uppercase text-[#C41E3A]">
+              <span className="w-5 h-[2px] bg-[var(--accent)]" />
+              <p className="text-[12px] font-semibold tracking-[0.12em] uppercase text-[var(--accent)]">
                 Key Features
               </p>
             </div>
@@ -102,7 +102,7 @@ export default function ExhibitionStallPage() {
                   key={title}
                   className="bg-[#F4F4F2] rounded-lg p-5 flex gap-4 items-start"
                 >
-                  <span className="w-2 h-2 rounded-full bg-[#C41E3A] mt-2 shrink-0" />
+                  <span className="w-2 h-2 rounded-full bg-[var(--accent)] mt-2 shrink-0" />
                   <div>
                     <h3 className="text-[15px] font-bold text-[#111111] mb-1">
                       {title}
@@ -142,7 +142,7 @@ export default function ExhibitionStallPage() {
 
           <Link
             href="/contact"
-            className="inline-flex mt-8 bg-[#C41E3A] hover:bg-[#A0182F] text-white px-7 py-3.5 rounded-md text-sm font-semibold transition"
+            className="inline-flex mt-8 bg-[var(--accent)] hover:bg-[var(--primary-dark)] text-white px-7 py-3.5 rounded-md text-sm font-semibold transition"
           >
             Get a Free Design
           </Link>

@@ -16,7 +16,7 @@ export default function CTABanner() {
         <div className="mt-8 flex flex-col sm:flex-row justify-center gap-3">
           <Link
             href="/contact"
-            className="bg-[#C41E3A] hover:bg-[#A0182F] text-white px-7 py-3.5 rounded-md text-sm font-semibold transition"
+            className="bg-[var(--accent)] hover:bg-[var(--primary-dark)] text-white px-7 py-3.5 rounded-md text-sm font-semibold transition"
           >
             Get Free Quote
           </Link>

@@ -86,7 +86,7 @@ function BlogHero({
           ← Back to Blog
         </Link>
 
-        <p className="mt-8 text-[12px] font-semibold tracking-[0.14em] uppercase text-[#C41E3A]">
+        <p className="mt-8 text-[12px] font-semibold tracking-[0.14em] uppercase text-[var(--accent)]">
           {category}
         </p>
 
@@ -115,7 +115,7 @@ function BlogArticle({ children }: { children: React.ReactNode }) {
           </p>
           <Link
             href="/contact"
-            className="inline-flex mt-6 bg-[#C41E3A] hover:bg-[#A0182F] text-white px-7 py-3.5 rounded-md text-sm font-semibold transition"
+            className="inline-flex mt-6 bg-[var(--accent)] hover:bg-[var(--primary-dark)] text-white px-7 py-3.5 rounded-md text-sm font-semibold transition"
           >
             Contact Us
           </Link>

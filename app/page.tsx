@@ -16,7 +16,7 @@ export default function Home() {
       <MarqueeBar />
       <IntroSection />
       <StatsStrip />
-      <ServicesSection />
+      {/* <ServicesSection /> */}
       <PortfolioPreview />
       <WhyUs />
       <ProcessSection />
