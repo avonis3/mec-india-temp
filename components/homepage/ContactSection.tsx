@@ -23,7 +23,7 @@ export default function ContactSection() {
 
           <div className="mt-10 space-y-6">
             <ContactItem icon={<Phone size={20} />} label="Phone and WhatsApp" value="+91 9920 328 287" />
-            <ContactItem icon={<Mail size={20} />} label="Email" value="sales@mecindia.co.in" />
+            <ContactItem icon={<Mail size={20} />} label="Email" value="manoj.malpani@gmail.com" />
             <ContactItem icon={<MapPin size={20} />} label="Location" value="Mumbai, Maharashtra. Pan India service." />
           </div>
         </div>

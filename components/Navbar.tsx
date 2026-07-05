@@ -59,7 +59,7 @@ export default function Navbar() {
           <img
             src="https://i0.wp.com/mecindia.co.in/wp-content/uploads/2022/05/Design-1-web-png.png?fit=800%2C227&ssl=1"
             alt="MEC India"
-            className="h-[40px] lg:h-[46px] w-auto"
+            className="h-[53px] lg:h-[58px] w-auto"
           />
         </Link>
 

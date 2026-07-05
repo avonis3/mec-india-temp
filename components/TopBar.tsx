@@ -6,8 +6,8 @@ export default function TopBar() {
           <a className="text-white/70 hover:text-white" href="tel:+919920328287">
             +91 9920 328 287
           </a>
-          <a className="text-white/70 hover:text-white" href="mailto:sales@mecindia.co.in">
-            sales@mecindia.co.in
+          <a className="text-white/70 hover:text-white" href="mailto:manoj.malpani@gmail.com">
+            manoj.malpani@gmail.com
           </a>
         </div>
 
