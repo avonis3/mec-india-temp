@@ -135,12 +135,19 @@ ${message}`;
             </div>
 
             <div className="mt-9 overflow-hidden rounded-xl border border-[#E5E7EB] h-[260px]">
-              <iframe
-                src="https://maps.google.com/maps?q=Prabhadevi,Mumbai,Maharashtra&output=embed"
-                className="w-full h-full"
-                loading="lazy"
-              />
-            </div>
+  <a
+    href="https://maps.app.goo.gl/rqvLekfecCVetw376?g_st=iw"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="block w-full h-full"
+  >
+    <iframe
+      src="https://maps.google.com/maps?q=Prabhadevi,Mumbai,Maharashtra&output=embed"
+      className="w-full h-full pointer-events-none"
+      loading="lazy"
+    />
+  </a>
+</div>
           </div>
 
           <div className="bg-white rounded-xl border border-[#E5E7EB] p-6 lg:p-8 shadow-sm">

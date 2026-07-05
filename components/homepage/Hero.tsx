@@ -22,7 +22,7 @@ export default function Hero() {
 
   return (
     <section className="bg-[var(--primary)] overflow-hidden">
-      <div className="max-w-[1600px] mx-auto px-8 xl:px-14">
+      <div className="hidden lg:block max-w-[1600px] mx-auto px-8 xl:px-14">
 
         <div className="min-h-[650px] flex items-center justify-between gap-20">
 
@@ -101,56 +101,96 @@ export default function Hero() {
         </div>
 
       </div>
+{/* MOBILE */}
 
-      {/* MOBILE */}
+<div className="lg:hidden relative min-h-[100svh] overflow-hidden">
 
-      <div className="lg:hidden relative h-[560px]">
+  {images.map((image, index) => (
+    <img
+      key={image}
+      src={image}
+      alt=""
+      className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ${
+        currentImage === index
+          ? "opacity-100"
+          : "opacity-0"
+      }`}
+    />
+  ))}
 
-        {images.map((image, index) => (
-          <img
-            key={image}
-            src={image}
-            alt=""
-            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
-              currentImage === index ? "opacity-100" : "opacity-0"
-            }`}
-          />
-        ))}
+  {/* Better Overlay */}
 
-        <div className="absolute inset-0 bg-black/55" />
+  {/* Vertical gradient */}
+<div className="absolute inset-0 bg-gradient-to-b from-black/15 via-black/45 to-black/85" />
 
-        <div className="relative z-10 h-full flex flex-col justify-center px-7">
+{/* Left-side gradient */}
+<div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent" />
 
-          <h1 className="font-extrabold leading-[0.98] tracking-[-0.04em] text-white">
+  <div className="relative z-10 flex h-full min-h-[100svh] flex-col justify-end px-6 pb-14">
 
-            <span className="block text-[40px]">
-              India's most
-            </span>
+    <div className="mb-8">
 
-            <span className="block text-[40px]">
-              trusted
-            </span>
+      <span className="inline-block rounded-full border border-white/25 bg-white/10 px-4 py-1 text-xs uppercase tracking-[0.18em] text-white backdrop-blur-sm">
+        MEC INDIA
+      </span>
 
-            <span className="block text-[40px] text-[var(--accent)]">
-              exhibition stall
-            </span>
+    </div>
 
-            <span className="block text-[40px]">
-              design company.
-            </span>
+    <h1 className="font-extrabold leading-[0.95] tracking-[-0.045em] text-white">
 
-          </h1>
+      <span className="block text-[42px]">
+        India's most
+      </span>
 
-          <Link
-            href="/contact"
-            className="mt-8 w-fit bg-[var(--accent)] px-7 py-4 rounded-xl text-white font-semibold"
-          >
-            Book a Free Consultation
-          </Link>
+      <span className="block text-[42px]">
+        trusted
+      </span>
 
-        </div>
+      <span className="block text-[42px] text-[var(--accent)]">
+        exhibition stall
+      </span>
 
-      </div>
+      <span className="block text-[42px]">
+        design company.
+      </span>
+
+    </h1>
+
+    <p className="mt-5 max-w-sm text-[15px] leading-7 text-white/80">
+      Premium exhibition stall designing and execution trusted by leading
+      brands across India.
+    </p>
+
+    <Link
+      href="/contact"
+      className="mt-8 flex h-14 items-center justify-center rounded-xl bg-[var(--accent)] font-semibold text-white shadow-xl transition active:scale-95"
+    >
+      Book a Free Consultation
+    </Link>
+
+    {/* Slider Dots */}
+
+    <div className="mt-8 flex justify-center gap-2">
+
+      {images.map((_, index) => (
+
+        <button
+          key={index}
+          onClick={() => setCurrentImage(index)}
+          className={`rounded-full transition-all duration-500 ${
+            currentImage === index
+              ? "h-2 w-8 bg-white"
+              : "h-2 w-2 bg-white/40"
+          }`}
+        />
+
+      ))}
+
+    </div>
+
+  </div>
+
+</div>
     </section>
   );
 }

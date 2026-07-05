@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const stats = [
-  ["20+", "Years Experience"],
+  ["15+", "Years Experience"],
   ["500+", "Projects Completed"],
   ["200+", "Satisfied Clients"],
   ["15+", "Industries Served"],

@@ -3,7 +3,7 @@ export default function StatsStrip() {
     ["15+", "Years of Experience"],
     ["500+", "Stalls Designed"],
     ["100+", "Happy Clients"],
-    ["20+", "Cities Covered"],
+    ["15+", "Cities Covered"],
   ];
 
   return (
