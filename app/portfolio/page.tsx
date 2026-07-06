@@ -1,132 +1,109 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import Link from "next/link";
-import { ChevronLeft, ChevronRight, X } from "lucide-react";
+import { useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const projects = [
   {
-    title: "Shakti Foods Stall",
-    cat: "Exhibition Stall",
-    image: "/images/homepage/ourwork1.png",
+    company: "Botanic Healthcare",
+    exhibition: "CPHI India 2024",
+    logo: "/images/logos/botanic.png",
+    image: "/images/portfolio/botanic.jpeg",
+  },
+
+  {
+    company: "VTS",
+    exhibition: "PlastIndia 2024",
+    logo: "/images/logos/vts.png",
+    image: "/images/portfolio/vts.jpeg",
+  },
+
+  {
+    company: "ADN",
+    exhibition: "India Warehousing Show",
+    logo: "/images/logos/adn.png",
+    image: "/images/portfolio/adn.jpeg",
   },
   {
-    title: "Chemtech 2023 Mumbai",
-    cat: "Exhibition Stall",
-    image: "/images/homepage/service1.png",
+    company: "Siddh",
+    exhibition: "India Pharma Expo",
+    logo: "/images/logos/siddh.png",
+    image: "/images/homepage/siddh.jpeg",
   },
+
   {
-    title: "Lalbaba Engineering Stall",
-    cat: "Exhibition Stall",
-    image: "/images/homepage/ourwork2.png",
+    company: "Vent",
+    exhibition: "Industrial Expo",
+    logo: "/images/logos/vent.png",
+    image: "/images/homepage/vent.jpg",
   },
+
   {
-    title: "Zoomlion Exhibition Stall",
-    cat: "Exhibition Stall",
-    image: "/images/homepage/ourwork3.png",
+    company: "Yasham",
+    exhibition: "Garment Technology Expo",
+    logo: "/images/logos/yasham.png",
+    image: "/images/homepage/yasham.jpeg",
   },
-  {
-    title: "German Hanger Structure",
-    cat: "German Hanger",
-    image: "/images/homepage/service2.png",
-  },
-  {
-    title: "Elecrama 2023 Delhi",
-    cat: "German Hanger",
-    image: "/images/homepage/about_mec.png",
-  },
-  {
-    title: "Smart Energiplus Stall",
-    cat: "Octanorm",
-    image: "/images/homepage/service3.png",
-  },
-  {
-    title: "Salvator Octanorm Stall",
-    cat: "Octanorm",
-    image: "/images/homepage/whychoose.png",
-  },
-  {
-    title: "Microtek Octanorm Stall",
-    cat: "Octanorm",
-    image: "/images/homepage/ourwork1.png",
-  },
+
 ];
 
-const filters = ["All Projects", "Exhibition Stall", "German Hanger", "Octanorm"];
-
 export default function PortfolioPage() {
-  const [active, setActive] = useState("All Projects");
-  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+  const [mobileIndex, setMobileIndex] = useState(0);
+  const [mobileFlip, setMobileFlip] = useState(false);
 
-  const visibleProjects =
-    active === "All Projects"
-      ? projects
-      : projects.filter((project) => project.cat === active);
+  const prev = () => {
+    setMobileFlip(false);
 
-  const selectedProject =
-    selectedIndex !== null ? visibleProjects[selectedIndex] : null;
-
-  const closeLightbox = () => setSelectedIndex(null);
-
-  const showPrev = () => {
-    if (selectedIndex === null) return;
-    setSelectedIndex(
-      selectedIndex === 0 ? visibleProjects.length - 1 : selectedIndex - 1
+    setMobileIndex((prev) =>
+      prev === 0 ? projects.length - 1 : prev - 1
     );
   };
 
-  const showNext = () => {
-    if (selectedIndex === null) return;
-    setSelectedIndex(
-      selectedIndex === visibleProjects.length - 1 ? 0 : selectedIndex + 1
+  const next = () => {
+    setMobileFlip(false);
+
+    setMobileIndex((prev) =>
+      prev === projects.length - 1 ? 0 : prev + 1
     );
   };
-
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (selectedIndex === null) return;
-
-      if (e.key === "Escape") closeLightbox();
-      if (e.key === "ArrowLeft") showPrev();
-      if (e.key === "ArrowRight") showNext();
-    };
-
-    window.addEventListener("keydown", handleKeyDown);
-
-    if (selectedIndex !== null) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-
-    return () => {
-      window.removeEventListener("keydown", handleKeyDown);
-      document.body.style.overflow = "";
-    };
-  }, [selectedIndex, visibleProjects.length]);
 
   return (
     <>
       <section className="relative overflow-hidden bg-[#111111] py-20 lg:py-24">
+
         <div
           className="absolute inset-0 bg-cover bg-center opacity-15"
-          style={{ backgroundImage: "url('/images/homepage/ourwork3.png')" }}
+          style={{
+            backgroundImage:
+              "url('/images/homepage/ourwork3.png')",
+          }}
         />
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10">
+
           <div className="text-[13px] text-white/35 mb-5">
+
             <Link href="/" className="hover:text-white/70">
               Home
             </Link>
+
             <span className="mx-2">/</span>
-            <span className="text-white/60">Portfolio</span>
+
+            <span className="text-white/60">
+              Portfolio
+            </span>
+
           </div>
 
           <div className="flex items-center gap-2 mb-4">
+
             <span className="w-5 h-[2px] bg-[var(--accent)]" />
+
             <p className="text-[12px] font-semibold tracking-[0.14em] uppercase text-[var(--accent)]">
               Our Work
             </p>
+
           </div>
 
           <h1 className="text-[34px] sm:text-[44px] lg:text-[56px] font-extrabold leading-[1.1] tracking-[-0.02em] text-white">
@@ -134,167 +111,325 @@ export default function PortfolioPage() {
           </h1>
 
           <p className="mt-4 max-w-xl text-[16px] lg:text-[17px] leading-7 text-white/60">
-            Over 500 stalls designed and built across India. Here is a selection
-            of our favourite projects.
+            Over 500 stalls designed and built across India.
+            Browse some of our favourite exhibition projects.
           </p>
+
         </div>
+
       </section>
 
       <section className="bg-white py-16 lg:py-20">
+
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <div className="flex flex-wrap gap-3 mb-10">
-            {filters.map((filter) => (
-              <button
-                key={filter}
-                type="button"
-                onClick={() => {
-                  setActive(filter);
-                  setSelectedIndex(null);
-                }}
-                className={`rounded-full border px-6 py-2.5 text-[13.5px] font-semibold transition ${
-                  active === filter
-                    ? "bg-[var(--accent)] border-[var(--accent)] text-white"
-                    : "bg-white border-[#E5E7EB] text-[#6B7280] hover:bg-[var(--accent)] hover:border-[var(--accent)] hover:text-white"
-                }`}
-              >
-                {filter}
-              </button>
-            ))}
-          </div>
+          {/* ================= DESKTOP ================= */}
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {visibleProjects.map((project, index) => (
-              <button
-                key={`${project.title}-${index}`}
-                type="button"
-                onClick={() => setSelectedIndex(index)}
-                className="group relative h-[250px] rounded-lg overflow-hidden bg-[#F4F4F2] text-left cursor-zoom-in"
-                aria-label={`Open ${project.title}`}
-              >
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover transition duration-500 group-hover:scale-105"
-                />
+<div className="hidden lg:grid lg:grid-cols-3 gap-7">
 
-                <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-5">
-                  <p className="text-[11px] font-bold tracking-[0.12em] uppercase text-white/70">
-                    {project.cat}
-                  </p>
+  {projects.map((project, index) => (
 
-                  <h2 className="mt-1 text-[15px] font-semibold text-white">
-                    {project.title}
-                  </h2>
+    <div
+      key={index}
+      className="group [perspective:1500px]"
+    >
 
-                  <p className="mt-3 text-[12px] text-white/70">
-                    Click to enlarge
-                  </p>
-                </div>
-              </button>
-            ))}
-          </div>
+      <div
+        className="
+          relative
+          h-[290px]
+          rounded-2xl
+          transition-transform
+          duration-700
+          [transform-style:preserve-3d]
+          group-hover:[transform:rotateY(180deg)]
+        "
+      >
 
-          <div className="mt-16 rounded-xl bg-[#F4F4F2] px-6 py-12 text-center">
-            <div className="inline-flex items-center justify-center gap-2 mb-4">
+        {/* FRONT */}
+
+        <div
+          className="
+            absolute
+            inset-0
+            rounded-2xl
+            overflow-hidden
+            shadow-xl
+            [backface-visibility:hidden]
+          "
+        >
+
+          <img
+            src={project.image}
+            alt={project.company}
+            className="w-full h-full object-cover"
+          />
+
+        </div>
+
+        {/* BACK */}
+
+        <div
+          className="
+            absolute
+            inset-0
+            rounded-2xl
+            bg-[var(--primary)]
+            text-white
+            flex
+            flex-col
+            justify-center
+            items-center
+            px-8
+            text-center
+            [transform:rotateY(180deg)]
+            [backface-visibility:hidden]
+          "
+        >
+
+          <img
+            src={project.logo}
+            alt={project.company}
+            className="h-16 object-contain mb-6"
+          />
+
+          <h3 className="text-2xl font-bold">
+            {project.company}
+          </h3>
+
+          <p className="mt-3 text-white/80">
+            {project.exhibition}
+          </p>
+
+          <div className="w-12 h-[2px] bg-[var(--accent)] my-5" />
+
+          <p className="text-sm text-white/70">
+            Designed & Executed by
+          </p>
+
+          <p className="font-semibold mt-1">
+            MEC India
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  ))}
+
+</div>
+
+{/* ================= MOBILE ================= */}
+
+<div className="lg:hidden">
+
+  <div className="relative">
+
+    <div
+      className="[perspective:1200px]"
+      onClick={() => setMobileFlip(!mobileFlip)}
+    >
+
+      <div
+        className={`
+          relative
+          h-[340px]
+          rounded-2xl
+          transition-transform
+          duration-700
+          [transform-style:preserve-3d]
+          ${mobileFlip ? "[transform:rotateY(180deg)]" : ""}
+        `}
+      >
+
+        {/* FRONT */}
+
+        <div
+          className="
+            absolute
+            inset-0
+            rounded-2xl
+            overflow-hidden
+            shadow-xl
+            [backface-visibility:hidden]
+          "
+        >
+
+          <img
+            src={projects[mobileIndex].image}
+            alt={projects[mobileIndex].company}
+            className="w-full h-full object-cover"
+          />
+
+        </div>
+
+        {/* BACK */}
+
+        <div
+          className="
+            absolute
+            inset-0
+            rounded-2xl
+            bg-[var(--primary)]
+            text-white
+            flex
+            flex-col
+            justify-center
+            items-center
+            px-8
+            text-center
+            [transform:rotateY(180deg)]
+            [backface-visibility:hidden]
+          "
+        >
+
+          <img
+            src={projects[mobileIndex].logo}
+            alt=""
+            className="h-16 object-contain mb-6"
+          />
+
+          <h3 className="text-2xl font-bold">
+            {projects[mobileIndex].company}
+          </h3>
+
+          <p className="mt-3 text-white/80">
+            {projects[mobileIndex].exhibition}
+          </p>
+
+          <div className="w-12 h-[2px] bg-[var(--accent)] my-5" />
+
+          <p className="text-sm text-white/70">
+            Designed & Executed by
+          </p>
+
+          <p className="font-semibold mt-1">
+            MEC India
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    {/* LEFT */}
+
+    <button
+      onClick={prev}
+      className="
+        absolute
+        left-3
+        top-1/2
+        -translate-y-1/2
+        w-11
+        h-11
+        rounded-full
+        bg-white
+        shadow-xl
+        flex
+        items-center
+        justify-center
+      "
+    >
+      <ChevronLeft size={22} />
+    </button>
+
+    {/* RIGHT */}
+
+    <button
+      onClick={next}
+      className="
+        absolute
+        right-3
+        top-1/2
+        -translate-y-1/2
+        w-11
+        h-11
+        rounded-full
+        bg-white
+        shadow-xl
+        flex
+        items-center
+        justify-center
+      "
+    >
+      <ChevronRight size={22} />
+    </button>
+
+  </div>
+
+  {/* DOTS */}
+
+  <div className="flex justify-center gap-2 mt-6">
+
+    {projects.map((_, i) => (
+
+      <button
+        key={i}
+        onClick={() => {
+          setMobileIndex(i);
+          setMobileFlip(false);
+        }}
+        className={`transition-all duration-300 rounded-full ${
+          mobileIndex === i
+            ? "w-8 h-2 bg-[var(--accent)]"
+            : "w-2 h-2 bg-gray-300"
+        }`}
+      />
+
+    ))}
+
+  </div>
+
+</div>
+          {/* CTA */}
+
+          <div className="mt-16 rounded-2xl bg-[#F4F4F2] px-6 py-14 text-center">
+
+            <div className="inline-flex items-center gap-2 mb-4">
               <span className="w-5 h-[2px] bg-[var(--accent)]" />
+
               <p className="text-[12px] font-semibold tracking-[0.12em] uppercase text-[var(--accent)]">
                 Start a Project
               </p>
             </div>
 
-            <h2 className="text-[30px] sm:text-[36px] lg:text-[44px] font-extrabold tracking-[-0.02em] leading-[1.1] text-[#111111]">
+            <h2 className="text-[30px] sm:text-[36px] lg:text-[44px] font-extrabold leading-tight tracking-[-0.02em] text-[#111]">
               Have a project in mind?
             </h2>
 
-            <p className="mt-3 max-w-xl mx-auto text-[15px] text-[#6B7280] leading-7">
-              Share your exhibition brief and we will create a custom design for
-              you.
+            <p className="mt-4 max-w-2xl mx-auto text-[#6B7280] leading-7">
+              Share your exhibition brief and let our team create a custom
+              exhibition stall that attracts visitors and elevates your brand.
             </p>
 
             <Link
               href="/contact"
-              className="inline-flex mt-7 bg-[var(--accent)] hover:bg-[var(--primary-dark)] text-white px-7 py-3.5 rounded-md text-sm font-semibold transition"
+              className="
+                inline-flex
+                items-center
+                mt-8
+                bg-[var(--accent)]
+                hover:bg-[var(--primary)]
+                text-white
+                px-8
+                py-4
+                rounded-xl
+                font-semibold
+                transition
+              "
             >
               Get a Free Design
             </Link>
+
           </div>
+
         </div>
+
       </section>
 
-      {selectedProject && (
-        <div
-          className="fixed inset-0 z-[9999] bg-black/90 px-4 py-6 flex items-center justify-center"
-          onClick={closeLightbox}
-        >
-          <button
-            type="button"
-            onClick={closeLightbox}
-            className="absolute top-5 right-5 w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition"
-            aria-label="Close image"
-          >
-            <X size={24} />
-          </button>
-
-          <button
-            type="button"
-            onClick={(e) => {
-              e.stopPropagation();
-              showPrev();
-            }}
-            className="hidden sm:flex absolute left-5 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 text-white items-center justify-center transition"
-            aria-label="Previous image"
-          >
-            <ChevronLeft size={28} />
-          </button>
-
-          <button
-            type="button"
-            onClick={(e) => {
-              e.stopPropagation();
-              showNext();
-            }}
-            className="hidden sm:flex absolute right-5 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 text-white items-center justify-center transition"
-            aria-label="Next image"
-          >
-            <ChevronRight size={28} />
-          </button>
-
-          <div
-            className="w-full max-w-6xl"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="bg-white rounded-xl overflow-hidden shadow-2xl">
-              <img
-                src={selectedProject.image}
-                alt={selectedProject.title}
-                className="w-full max-h-[75vh] object-contain bg-black"
-              />
-
-              
-            </div>
-
-            <div className="sm:hidden mt-4 flex justify-center gap-3">
-              <button
-                type="button"
-                onClick={showPrev}
-                className="w-12 h-12 rounded-full bg-white/10 text-white flex items-center justify-center"
-                aria-label="Previous image"
-              >
-                <ChevronLeft size={26} />
-              </button>
-
-              <button
-                type="button"
-                onClick={showNext}
-                className="w-12 h-12 rounded-full bg-white/10 text-white flex items-center justify-center"
-                aria-label="Next image"
-              >
-                <ChevronRight size={26} />
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
     </>
   );
 }
