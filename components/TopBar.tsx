@@ -25,10 +25,11 @@ export default function TopBar() {
             href="https://www.linkedin.com/company/mec-india/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white/70 hover:text-[#0A66C2] transition duration-300"
+            className="flex items-center gap-2 text-white/70 hover:text-[#0A66C2] transition duration-300"
             aria-label="LinkedIn"
           >
             <FaLinkedinIn size={16} />
+            <span className="font-medium">LinkedIn</span>
           </a>
         </div>
       </div>

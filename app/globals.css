@@ -3,14 +3,13 @@
 :root{
   --primary:#0D3B78;      /* Navy */
   --primary-dark:#082D5C;
-
   --accent:#F36C21;       /* Orange */
 
   --dark:#111111;
   --body:#2A2A2A;
   --muted:#616161;
 
-  --white:#FFFFFF;
+  --white:#FAFAF7;
   --light:#F8F8F6;
 
   --border:#E7E5E2;

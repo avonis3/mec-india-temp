@@ -22,85 +22,92 @@ export default function Hero() {
 
   return (
     <section className="bg-[var(--primary)] overflow-hidden">
-      <div className="hidden lg:block max-w-[1600px] mx-auto px-8 xl:px-14">
+      {/* DESKTOP */}
+<div className="hidden lg:block relative min-h-[760px] overflow-hidden">
 
-        <div className="min-h-[650px] flex items-center justify-between gap-20">
+  {/* Background Slideshow */}
+  {images.map((image, index) => (
+    <img
+      key={image}
+      src={image}
+      alt=""
+      className={`absolute inset-0 w-full h-full object-cover transition-all duration-[1800ms] ${
+        currentImage === index
+          ? "opacity-100 scale-100"
+          : "opacity-0 scale-105"
+      }`}
+    />
+  ))}
 
-          {/* LEFT CONTENT */}
-          <div className="max-w-[720px] flex-shrink-0">
+  {/* Main Dark Blue Gradient */}
+  <div className="absolute inset-0 bg-gradient-to-r from-[#031B3C]/95 via-[#031B3C]/82 via-20% to-[#031B3C]/25" />
 
-            <h1 className="font-extrabold leading-[0.93] tracking-[-0.05em] text-white">
+  {/* Vertical Fade */}
+  <div className="absolute inset-0 bg-gradient-to-b from-black/15 via-transparent to-black/35" />
 
-              <span className="block text-[68px] xl:text-[78px]">
-                India's most
-              </span>
+  {/* Orange Glow */}
+  <div className="absolute -bottom-36 -left-24 w-[420px] h-[420px] rounded-full bg-[var(--accent)]/20 blur-[50px]" />
 
-              <span className="block text-[68px] xl:text-[78px]">
-                trusted
-              </span>
+  {/* Hero Content */}
+  <div className="relative z-20 max-w-7xl mx-auto h-[760px] px-10 flex items-center">
 
-              <span className="block text-[68px] xl:text-[78px] text-[var(--accent)]">
-                exhibition stall
-              </span>
+    <div className="max-w-[700px]">
 
-              <span className="block text-[68px] xl:text-[78px]">
-                design company.
-              </span>
+      <h1 className="font-extrabold leading-[1.03] tracking-[-0.03em] text-white">
 
-            </h1>
+        <span className="block text-[72px]">
+          India's most
+        </span>
 
-            <Link
-              href="/contact"
-              className="inline-flex mt-10 bg-[var(--accent)] hover:opacity-90 text-white font-semibold px-8 py-4 rounded-xl transition"
-            >
-              Book a Free Consultation
-            </Link>
-          </div>
+        <span className="block text-[72px]">
+          trusted
+        </span>
 
-          {/* RIGHT IMAGE */}
-          <div className="relative flex-1 h-[560px]">
+        <span className="block text-[72px] text-[var(--accent)]">
+          exhibition stall
+        </span>
 
-            <div className="relative w-full h-full rounded-[32px] overflow-hidden shadow-[0_40px_80px_rgba(0,0,0,.45)]">
+        <span className="block text-[72px]">
+          design company.
+        </span>
 
-              {images.map((image, index) => (
-                <img
-                  key={image}
-                  src={image}
-                  alt=""
-                  className={`absolute inset-0 w-full h-full object-cover transition-all duration-[1800ms]
-                  ${
-                    currentImage === index
-                      ? "opacity-100 scale-100"
-                      : "opacity-0 scale-110"
-                  }`}
-                />
-              ))}
+      </h1>
 
-            </div>
+      {/* <p className="mt-8 max-w-[560px] text-lg leading-8 text-white/75">
+        We design and build premium exhibition stalls that elevate your
+        brand, attract visitors, and create memorable exhibition
+        experiences across India.
+      </p> */}
 
-            {/* Dots */}
+      <Link
+        href="/contact"
+        className="inline-flex mt-13 bg-[var(--accent)] hover:brightness-110 text-white px-9 py-4 rounded-xl font-semibold transition shadow-[0_20px_50px_rgba(255,111,0,0.35)]"
+      >
+        Book a Free Consultation
+      </Link>
 
-            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-3">
+    </div>
 
-              {images.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentImage(index)}
-                  className={`transition-all duration-500 rounded-full ${
-                    currentImage === index
-                      ? "w-10 h-2 bg-[var(--accent)]"
-                      : "w-2 h-2 bg-white/50"
-                  }`}
-                />
-              ))}
+  </div>
 
-            </div>
+  {/* Slider Dots */}
+  <div className="absolute bottom-10 right-14 flex gap-3 z-30">
 
-          </div>
+    {images.map((_, index) => (
+      <button
+        key={index}
+        onClick={() => setCurrentImage(index)}
+        className={`transition-all duration-500 rounded-full ${
+          currentImage === index
+            ? "w-10 h-2 bg-[var(--accent)]"
+            : "w-2 h-2 bg-white/45"
+        }`}
+      />
+    ))}
 
-        </div>
+  </div>
 
-      </div>
+</div>
 {/* MOBILE */}
 
 <div className="lg:hidden relative min-h-[100svh] overflow-hidden">

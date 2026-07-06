@@ -46,7 +46,7 @@ const next = () =>
 const prev = () =>
   setCurrent((prev) => (prev - 1 + projects.length) % projects.length);
   return (
-    <section className="bg-[#FAFAF8] py-20 lg:py-28">
+    <section className="bg-[#F4F4F2] py-20 lg:py-28">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
 
         <div className="text-center mb-14">

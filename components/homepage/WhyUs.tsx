@@ -9,7 +9,7 @@ const features = [
 
 export default function WhyUs() {
   return (
-    <section className="bg-[#F4F4F2] py-16 lg:py-24">
+    <section className="bg-white py-16 lg:py-24">
       <div className="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         <div>
           <div className="flex items-center gap-2 mb-4">

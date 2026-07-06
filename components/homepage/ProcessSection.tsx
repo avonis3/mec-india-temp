@@ -7,7 +7,7 @@ const steps = [
 
 export default function ProcessSection() {
   return (
-    <section className="bg-white py-16 lg:py-24">
+    <section className="bg-[#F4F4F2] py-16 lg:py-24">
       <div className="max-w-7xl mx-auto px-6 lg:px-10 text-center">
         <div className="inline-flex items-center justify-center gap-2 mb-4">
           <span className="w-5 h-[2px] bg-[var(--accent)]" />
