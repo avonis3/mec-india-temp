@@ -2,44 +2,8 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import {
-  ChevronDown,
-  CircleDot,
-  LayoutPanelTop,
-  Menu,
-  Warehouse,
-  X,
-} from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
-
-const serviceLinks = [
-  {
-    href: "/services/exhibition-stall-design",
-    title: "Exhibition Stall Design",
-    desc: "Custom stalls for any exhibition",
-    icon: LayoutPanelTop,
-  },
-  {
-    href: "/services/german-hanger-structure",
-    title: "German Hanger Structure",
-    desc: "Large-scale aluminum structures",
-    icon: Warehouse,
-  },
-  {
-    href: "/services/octanorm-stall",
-    title: "Octanorm Stall",
-    desc: "Modular system stalls",
-    icon: CircleDot,
-  },
-];
-
-const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About Us" },
-  { href: "/portfolio", label: "Portfolio" },
-  { href: "/blog", label: "Blog" },
-  { href: "/contact", label: "Contact Us" },
-];
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -50,200 +14,171 @@ export default function Navbar() {
     return pathname === href || pathname.startsWith(`${href}/`);
   };
 
-  const servicesActive = pathname.startsWith("/services");
-
   return (
-    <nav className="sticky top-0 z-50 bg-white border-b border-gray-200">
+    <nav className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
       <div className="max-w-7xl mx-auto px-5 lg:px-10 h-[76px] lg:h-[82px] flex items-center justify-between">
+
+        {/* LOGO */}
         <Link href="/" className="shrink-0">
           <img
             src="https://i0.wp.com/mecindia.co.in/wp-content/uploads/2022/05/Design-1-web-png.png?fit=800%2C227&ssl=1"
             alt="MEC India"
-            className="h-[53px] lg:h-[58px] w-auto"
+            className="h-[54px] lg:h-[60px] w-auto"
           />
         </Link>
 
         {/* DESKTOP NAV */}
-        <div className="hidden md:flex items-center gap-2 text-[15px] font-semibold text-gray-700">
+        <div className="hidden md:flex items-center gap-8">
+
           <Link
-            className={`px-4 py-3 transition ${
-              isActive("/") ? "text-[var(--accent)]" : "hover:text-[var(--accent)]"
-            }`}
             href="/"
+            className={`font-semibold transition ${
+              isActive("/")
+                ? "text-[var(--accent)]"
+                : "text-gray-700 hover:text-[var(--accent)]"
+            }`}
           >
             Home
           </Link>
 
           <Link
-            className={`px-4 py-3 transition ${
-              isActive("/about") ? "text-[var(--accent)]" : "hover:text-[var(--accent)]"
-            }`}
             href="/about"
+            className={`font-semibold transition ${
+              isActive("/about")
+                ? "text-[var(--accent)]"
+                : "text-gray-700 hover:text-[var(--accent)]"
+            }`}
           >
             About Us
           </Link>
 
-          <div className="relative group">
-            <Link
-              href="/services"
-              className={`flex items-center gap-1 px-4 py-3 rounded-md transition ${
-                servicesActive
-                  ? "text-[var(--accent)] bg-gray-50"
-                  : "hover:text-[var(--accent)] hover:bg-gray-50"
-              }`}
-            >
-              Our Services
-              <ChevronDown
-                size={15}
-                className="transition-transform duration-200 group-hover:rotate-180"
-              />
-            </Link>
+          <Link
+            href="/portfolio"
+            className={`font-semibold transition ${
+              isActive("/portfolio")
+                ? "text-[var(--accent)]"
+                : "text-gray-700 hover:text-[var(--accent)]"
+            }`}
+          >
+            Portfolio
+          </Link>
 
-            <div className="absolute left-0 top-full pt-2 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200">
-              <div className="w-[292px] rounded-xl border border-gray-200 bg-white shadow-2xl p-3">
-                {serviceLinks.map((item) => {
-                  const Icon = item.icon;
-                  const active = isActive(item.href);
-
-                  return (
-                    <Link
-                      key={item.href}
-                      href={item.href}
-                      className={`flex gap-3 p-3 rounded-lg transition ${
-                        active ? "bg-red-50" : "hover:bg-red-50"
-                      }`}
-                    >
-                      <span
-                        className={`w-10 h-10 rounded-lg flex items-center justify-center shrink-0 ${
-                          active
-                            ? "bg-[var(--accent)] text-white"
-                            : "bg-gray-100 text-[var(--accent)]"
-                        }`}
-                      >
-                        <Icon size={18} />
-                      </span>
-
-                      <span>
-                        <span
-                          className={`block text-[14px] font-bold leading-snug ${
-                            active ? "text-[var(--accent)]" : "text-gray-800"
-                          }`}
-                        >
-                          {item.title}
-                        </span>
-                        <span className="block text-[12.5px] text-gray-500 mt-1 leading-relaxed">
-                          {item.desc}
-                        </span>
-                      </span>
-                    </Link>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
-
-          {navLinks.slice(2).map((link) => (
-            <Link
-              key={link.href}
-              className={`px-4 py-3 transition ${
-                isActive(link.href)
-                  ? "text-[var(--accent)]"
-                  : "hover:text-[var(--accent)]"
-              }`}
-              href={link.href}
-            >
-              {link.label}
-            </Link>
-          ))}
+          <Link
+            href="/blog"
+            className={`font-semibold transition ${
+              isActive("/blog")
+                ? "text-[var(--accent)]"
+                : "text-gray-700 hover:text-[var(--accent)]"
+            }`}
+          >
+            Blog
+          </Link>
 
           <Link
             href="/contact"
-            className="ml-4 bg-[var(--accent)] text-white px-7 py-4 rounded-md hover:bg-[var(--primary-dark)] transition"
+            className={`font-semibold transition ${
+              isActive("/contact")
+                ? "text-[var(--accent)]"
+                : "text-gray-700 hover:text-[var(--accent)]"
+            }`}
+          >
+            Contact Us
+          </Link>
+
+          <Link
+            href="/contact"
+            className="ml-3 bg-[var(--accent)] hover:bg-[var(--primary-dark)] text-white px-7 py-3.5 rounded-lg transition font-semibold"
           >
             Get Free Quote
           </Link>
+
         </div>
 
         {/* MOBILE BUTTON */}
         <button
-          type="button"
           onClick={() => setOpen(true)}
-          className="md:hidden w-10 h-10 rounded-md border border-gray-200 flex items-center justify-center"
-          aria-label="Open menu"
+          className="md:hidden w-11 h-11 rounded-lg border border-gray-200 flex items-center justify-center"
         >
-          <Menu size={22} />
+          <Menu size={24} />
         </button>
+
       </div>
 
       {/* MOBILE MENU */}
       {open && (
-        <div className="fixed inset-0 z-[999] bg-black/40 md:hidden">
-          <div className="ml-auto h-full w-[82%] max-w-[340px] bg-white p-6 shadow-2xl overflow-y-auto">
+        <div className="fixed inset-0 z-[999] bg-black/50 md:hidden">
+
+          <div className="ml-auto h-full w-[84%] max-w-[340px] bg-white shadow-2xl p-6 overflow-y-auto">
+
             <div className="flex items-center justify-between mb-8">
+
               <img
                 src="https://i0.wp.com/mecindia.co.in/wp-content/uploads/2022/05/Design-1-web-png.png?fit=800%2C227&ssl=1"
                 alt="MEC India"
-                className="h-[38px] w-auto"
+                className="h-10 w-auto"
               />
 
               <button
-                type="button"
                 onClick={() => setOpen(false)}
-                className="w-9 h-9 rounded-md border border-gray-200 flex items-center justify-center"
-                aria-label="Close menu"
+                className="w-10 h-10 rounded-lg border border-gray-200 flex items-center justify-center"
               >
-                <X size={20} />
+                <X size={22} />
               </button>
+
             </div>
 
-            <div className="flex flex-col gap-1 text-[15px] font-semibold">
-              <MobileLink href="/" label="Home" active={isActive("/")} onClick={() => setOpen(false)} />
-              <MobileLink href="/about" label="About Us" active={isActive("/about")} onClick={() => setOpen(false)} />
+            <div className="flex flex-col gap-2">
 
-              <Link
-                href="/services"
+              <MobileLink
+                href="/"
+                label="Home"
+                active={isActive("/")}
                 onClick={() => setOpen(false)}
-                className={`px-4 py-3 rounded-md ${
-                  servicesActive
-                    ? "text-[var(--accent)] bg-red-50"
-                    : "text-gray-700 hover:bg-gray-50"
-                }`}
-              >
-                Our Services
-              </Link>
+              />
 
-              <div className="ml-3 mt-1 mb-2 border-l border-gray-200 pl-3 space-y-1">
-                {serviceLinks.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    onClick={() => setOpen(false)}
-                    className={`block px-4 py-2 rounded-md text-[14px] ${
-                      isActive(item.href)
-                        ? "text-[var(--accent)] bg-red-50"
-                        : "text-gray-600 hover:bg-gray-50"
-                    }`}
-                  >
-                    {item.title}
-                  </Link>
-                ))}
-              </div>
+              <MobileLink
+                href="/about"
+                label="About Us"
+                active={isActive("/about")}
+                onClick={() => setOpen(false)}
+              />
 
-              <MobileLink href="/portfolio" label="Portfolio" active={isActive("/portfolio")} onClick={() => setOpen(false)} />
-              <MobileLink href="/blog" label="Blog" active={isActive("/blog")} onClick={() => setOpen(false)} />
-              <MobileLink href="/contact" label="Contact Us" active={isActive("/contact")} onClick={() => setOpen(false)} />
+              <MobileLink
+                href="/portfolio"
+                label="Portfolio"
+                active={isActive("/portfolio")}
+                onClick={() => setOpen(false)}
+              />
+
+              <MobileLink
+                href="/blog"
+                label="Blog"
+                active={isActive("/blog")}
+                onClick={() => setOpen(false)}
+              />
+
+              <MobileLink
+                href="/contact"
+                label="Contact Us"
+                active={isActive("/contact")}
+                onClick={() => setOpen(false)}
+              />
 
               <Link
                 href="/contact"
                 onClick={() => setOpen(false)}
-                className="mt-4 bg-[var(--accent)] text-white text-center px-6 py-3.5 rounded-md hover:bg-[var(--primary-dark)] transition"
+                className="mt-5 bg-[var(--accent)] text-white text-center py-3.5 rounded-lg font-semibold hover:bg-[var(--primary-dark)] transition"
               >
                 Get Free Quote
               </Link>
+
             </div>
+
           </div>
+
         </div>
       )}
+
     </nav>
   );
 }
@@ -263,10 +198,10 @@ function MobileLink({
     <Link
       href={href}
       onClick={onClick}
-      className={`px-4 py-3 rounded-md ${
+      className={`px-4 py-3 rounded-lg font-semibold transition ${
         active
-          ? "text-[var(--accent)] bg-red-50"
-          : "text-gray-700 hover:bg-gray-50"
+          ? "bg-red-50 text-[var(--accent)]"
+          : "text-gray-700 hover:bg-gray-100"
       }`}
     >
       {label}

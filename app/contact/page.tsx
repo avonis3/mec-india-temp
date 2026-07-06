@@ -115,7 +115,7 @@ ${message}`;
               <ContactItem
                 icon={<MapPin size={18} />}
                 label="Address"
-                value="Office 302, Siddhivinayak Building, Prabhadevi, Mumbai 400025, Maharashtra"
+                value="Off. No. 6, Ivory Tower, Gokhale Road(S), Prabhadevi, Mumbai - 400025"
               />
               <ContactItem
                 icon={<Phone size={18} />}
@@ -142,10 +142,10 @@ ${message}`;
     className="block w-full h-full"
   >
     <iframe
-      src="https://maps.google.com/maps?q=Prabhadevi,Mumbai,Maharashtra&output=embed"
-      className="w-full h-full pointer-events-none"
-      loading="lazy"
-    />
+  src="https://maps.google.com/maps?q=19.017614,72.829825&z=17&output=embed"
+  className="w-full h-full"
+  loading="lazy"
+/>
   </a>
 </div>
           </div>

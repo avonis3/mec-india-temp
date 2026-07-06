@@ -109,7 +109,7 @@ const prev = () =>
         <div className="absolute inset-0 rounded-2xl bg-[var(--primary)] flex items-center justify-center [transform:rotateY(180deg)] [backface-visibility:hidden]">
 
           <img
-            src={project.logo}
+            // src={project.logo}
             alt={project.name}
             className="max-w-[170px] max-h-[90px] object-contain"
           />
@@ -163,7 +163,7 @@ const prev = () =>
         <div className="absolute inset-0 rounded-2xl bg-[var(--primary)] flex items-center justify-center [transform:rotateY(180deg)] [backface-visibility:hidden]">
 
           <img
-            src={projects[current].logo}
+            // src={projects[current].logo}
             alt={projects[current].name}
             className="max-w-[160px] max-h-[80px] object-contain"
           />
