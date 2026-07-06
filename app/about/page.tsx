@@ -79,7 +79,7 @@ export default function AboutPage() {
             </div>
 
             <h2 className="text-[30px] sm:text-[36px] lg:text-[48px] font-extrabold leading-[1.1] tracking-[-0.02em] text-[#111111]">
-              20 years of building brand presence.
+              15 years of building brand presence.
             </h2>
 
             <p className="mt-5 text-[15.5px] text-[#4B5563] leading-7">
@@ -93,7 +93,7 @@ export default function AboutPage() {
             <p className="mt-4 text-[15.5px] text-[#4B5563] leading-7">
               We serve clients across pharmaceuticals, manufacturing,
               agriculture, technology, healthcare, and more. From a 9 sqm
-              Octanorm booth to a 200 sqm custom German Hanger structure, our
+              Octanorm booth to a 200 sqm custom structure, our
               team handles every project with the same attention to detail.
             </p>
 
