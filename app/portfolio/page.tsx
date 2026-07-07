@@ -7,45 +7,166 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 const projects = [
   {
     company: "Botanic Healthcare",
-    exhibition: "CPHI India 2024",
+    exhibition: "Vitafoods India",
     logo: "/images/logos/botanic.png",
     image: "/images/portfolio/botanic.jpeg",
   },
-
   {
     company: "VTS",
-    exhibition: "PlastIndia 2024",
+    exhibition: "Acrex",
     logo: "/images/logos/vts.png",
     image: "/images/portfolio/vts.jpeg",
   },
-
   {
     company: "ADN",
-    exhibition: "India Warehousing Show",
-    logo: "/images/logos/adn.png",
+    exhibition: "Acrex",
+    logo: "/images/logos/adn.jpg",
     image: "/images/portfolio/adn.jpeg",
   },
   {
     company: "Siddh",
-    exhibition: "India Pharma Expo",
-    logo: "/images/logos/siddh.png",
-    image: "/images/homepage/siddh.jpeg",
+    exhibition: "Bharat Tex",
+    logo: "/images/logos/siddh.jpg",
+    image: "/images/portfolio/siddh.jpeg",
   },
-
   {
     company: "Vent",
-    exhibition: "Industrial Expo",
-    logo: "/images/logos/vent.png",
-    image: "/images/homepage/vent.jpg",
+    exhibition: "FI India",
+    logo: "/images/logos/vent.jpg",
+    image: "/images/portfolio/vent.jpg",
   },
-
   {
     company: "Yasham",
-    exhibition: "Garment Technology Expo",
+    exhibition: "CPHI PMEC India",
     logo: "/images/logos/yasham.png",
-    image: "/images/homepage/yasham.jpeg",
+    image: "/images/portfolio/yasham.jpeg",
   },
-
+  {
+    company: "Madhusudhan",
+    exhibition: "Bharat Tex",
+    logo: "/images/logos/madhu.png",
+    image: "/images/portfolio/madhu.jpeg",
+  },
+  {
+    company: "Mirage",
+    exhibition: "Optika Mumbai",
+    logo: "/images/logos/mirage.png",
+    image: "/images/portfolio/mirage.jpeg",
+  },
+  {
+    company: "Titan",
+    exhibition: "India International Jewellery Show",
+    logo: "/images/logos/titan.png",
+    image: "/images/portfolio/titan.jpg",
+  },
+  {
+    company: "True Power",
+    exhibition: "Elecrama",
+    logo: "/images/logos/truepower.png",
+    image: "/images/portfolio/truepower.jpg",
+  },
+  {
+    company: "True Board",
+    exhibition: "IndiaWood",
+    logo: "/images/logos/trueboard.png",
+    image: "/images/portfolio/trueboard.jpg",
+  },
+  {
+    company: "Unicam",
+    exhibition: "Medicall",
+    logo: "/images/logos/unicam.png",
+    image: "/images/portfolio/unicam.jpeg",
+  },
+  {
+    company: "Damodar",
+    exhibition: "ChemExpo India",
+    logo: "/images/logos/damodar.png",
+    image: "/images/portfolio/damodar.jpeg",
+  },
+  {
+    company: "Suam",
+    exhibition: "PrintPack India",
+    logo: "/images/logos/suam.png",
+    image: "/images/portfolio/suam.jpeg",
+  },
+  {
+    company: "Intec",
+    exhibition: "Automation Expo",
+    logo: "/images/logos/intec.png",
+    image: "/images/portfolio/intec.jpeg",
+  },
+  {
+    company: "KWW",
+    exhibition: "IndiaWood",
+    logo: "/images/logos/kww.png",
+    image: "/images/portfolio/kww.jpeg",
+  },
+  {
+    company: "Colortech",
+    exhibition: "PaintIndia",
+    logo: "/images/logos/colortech.png",
+    image: "/images/portfolio/colortech.jpeg",
+  },
+  {
+    company: "Globiz",
+    exhibition: "PlastIndia",
+    logo: "/images/logos/globiz.png",
+    image: "/images/portfolio/globiz.jpeg",
+  },
+  {
+    company: "Pari",
+    exhibition: "Automation Expo",
+    logo: "/images/logos/pari.png",
+    image: "/images/portfolio/pari.jpeg",
+  },
+  {
+    company: "Esthe",
+    exhibition: "Cosmoprof India",
+    logo: "/images/logos/esthe.png",
+    image: "/images/portfolio/esthe.jpeg",
+  },
+  {
+    company: "Hari",
+    exhibition: "India Pharma Expo",
+    logo: "/images/logos/hari.png",
+    image: "/images/portfolio/hari.jpeg",
+  },
+  {
+    company: "Ecosystem",
+    exhibition: "RenewX",
+    logo: "/images/logos/ecosystem.png",
+    image: "/images/portfolio/ecosystem.jpg",
+  },
+  {
+    company: "SF Marine",
+    exhibition: "Seatech India",
+    logo: "/images/logos/sfmarine.png",
+    image: "/images/portfolio/sfmarine.jpg",
+  },
+  {
+    company: "SGF",
+    exhibition: "FoodPro",
+    logo: "/images/logos/sgf.png",
+    image: "/images/portfolio/sgf.jpg",
+  },
+  {
+    company: "Zeus",
+    exhibition: "Machine Tools Expo",
+    logo: "/images/logos/zeus.png",
+    image: "/images/portfolio/zeus.jpg",
+  },
+  {
+    company: "Multichem",
+    exhibition: "ChemExpo India",
+    logo: "/images/logos/multichem.png",
+    image: "/images/portfolio/multichem.jpeg",
+  },
+  {
+    company: "Raj Process",
+    exhibition: "Anuga FoodTec India",
+    logo: "/images/logos/rajprocess.png",
+    image: "/images/portfolio/rajprocess.jpeg",
+  },
 ];
 
 export default function PortfolioPage() {
@@ -160,7 +281,7 @@ export default function PortfolioPage() {
 
           <img
             src={project.image}
-            alt={project.company}
+            alt={project.exhibition}
             className="w-full h-full object-cover"
           />
 
@@ -187,28 +308,24 @@ export default function PortfolioPage() {
         >
 
           <img
-            src={project.logo}
-            alt={project.company}
-            className="h-16 object-contain mb-6"
-          />
+  src={project.logo}
+  alt={project.company}
+  className="h-16 object-contain mb-8"
+/>
 
-          <h3 className="text-2xl font-bold">
-            {project.company}
-          </h3>
+<p className="text-xl font-bold">
+  {project.exhibition}
+</p>
 
-          <p className="mt-3 text-white/80">
-            {project.exhibition}
-          </p>
+<div className="w-14 h-[2px] bg-[var(--accent)] my-6" />
 
-          <div className="w-12 h-[2px] bg-[var(--accent)] my-5" />
+<p className="text-sm uppercase tracking-[0.18em] text-white/60">
+  Designed & Executed by
+</p>
 
-          <p className="text-sm text-white/70">
-            Designed & Executed by
-          </p>
-
-          <p className="font-semibold mt-1">
-            MEC India
-          </p>
+<p className="mt-2 text-lg font-semibold">
+  MEC India
+</p>
 
         </div>
 
@@ -284,29 +401,25 @@ export default function PortfolioPage() {
           "
         >
 
-          <img
-            src={projects[mobileIndex].logo}
-            alt=""
-            className="h-16 object-contain mb-6"
-          />
+  <img
+  src={projects[mobileIndex].logo}
+  alt={projects[mobileIndex].company}
+  className="h-16 object-contain mb-8"
+/>
 
-          <h3 className="text-2xl font-bold">
-            {projects[mobileIndex].company}
-          </h3>
+<p className="text-xl font-bold">
+  {projects[mobileIndex].exhibition}
+</p>
 
-          <p className="mt-3 text-white/80">
-            {projects[mobileIndex].exhibition}
-          </p>
+<div className="w-14 h-[2px] bg-[var(--accent)] my-6" />
 
-          <div className="w-12 h-[2px] bg-[var(--accent)] my-5" />
+<p className="text-sm uppercase tracking-[0.18em] text-white/60">
+  Designed & Executed by
+</p>
 
-          <p className="text-sm text-white/70">
-            Designed & Executed by
-          </p>
-
-          <p className="font-semibold mt-1">
-            MEC India
-          </p>
+<p className="mt-2 text-lg font-semibold">
+  MEC India
+</p>
 
         </div>
 
