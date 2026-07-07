@@ -24,19 +24,54 @@ const logos = [
 
 export default function MarqueeBar() {
   return (
-    <section className="bg-[var(--accent)] overflow-hidden py-5">
-      <div className="flex whitespace-nowrap animate-[marquee_35s_linear_infinite]">
+    <section className="bg-[var(--accent)] overflow-hidden py-3 md:py-5">
+      <div className="flex whitespace-nowrap animate-[marquee_7s_linear_infinite] md:animate-[marquee_35s_linear_infinite]">
 
         {[...logos, ...logos].map((logo, index) => (
           <div
             key={index}
-            className="mx-8 flex h-20 w-44 shrink-0 items-center justify-center rounded-xl bg-white p-3 shadow-md"
+            className="
+              mx-3
+              md:mx-8
+
+              flex
+              shrink-0
+              items-center
+              justify-center
+
+              h-12
+              w-24
+
+              md:h-20
+              md:w-44
+
+              rounded-lg
+              md:rounded-xl
+
+              bg-white
+              p-2
+              md:p-3
+
+              shadow-md
+            "
           >
             <img
               src={logo}
               alt=""
               draggable={false}
-              className="max-h-12 max-w-[120px] w-auto object-contain transition duration-300 hover:scale-110"
+              className="
+                max-h-7
+                max-w-[70px]
+
+                md:max-h-12
+                md:max-w-[120px]
+
+                w-auto
+                object-contain
+                transition
+                duration-300
+                hover:scale-110
+              "
             />
           </div>
         ))}
