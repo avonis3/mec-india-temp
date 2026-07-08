@@ -144,7 +144,7 @@ export default function ExhibitionStallPage() {
             href="/contact"
             className="inline-flex mt-8 bg-[var(--accent)] hover:bg-[var(--primary-dark)] text-white px-7 py-3.5 rounded-md text-sm font-semibold transition"
           >
-            Get a Free Design
+            Get a Free Quote
           </Link>
         </div>
       </section>

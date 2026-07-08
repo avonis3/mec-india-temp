@@ -17,7 +17,7 @@ export default function ContactSection() {
           </h2>
 
           <p className="mt-5 text-[15.5px] text-[#4B5563] leading-7 max-w-lg">
-            Get a free design consultation with our team. Share your requirement
+            Get a free quote consultation with our team. Share your requirement
             and we will come back with concepts within 48 hours.
           </p>
 

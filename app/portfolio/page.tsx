@@ -534,7 +534,7 @@ export default function PortfolioPage() {
                 transition
               "
             >
-              Get a Free Design
+              Get a Free Quote
             </Link>
 
           </div>
