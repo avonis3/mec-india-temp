@@ -101,21 +101,6 @@ function BlogArticle({ children }: { children: React.ReactNode }) {
     <section className="bg-white py-14 lg:py-16">
       <article className="max-w-3xl mx-auto px-6 lg:px-10">
         <div className="prose-content">{children}</div>
-
-        <div className="mt-12 rounded-xl bg-[#F4F4F2] p-7 text-center">
-          <h2 className="text-[24px] font-extrabold text-[#111111]">
-            Need a workplace health package?
-          </h2>
-          <p className="mt-3 text-[15px] text-[#6B7280] leading-7">
-            Speak to our team for customised health check-up solutions.
-          </p>
-          <Link
-            href="/contact"
-            className="inline-flex mt-6 bg-[var(--accent)] hover:bg-[var(--primary-dark)] text-white px-7 py-3.5 rounded-md text-sm font-semibold transition"
-          >
-            Contact Us
-          </Link>
-        </div>
       </article>
     </section>
   );
