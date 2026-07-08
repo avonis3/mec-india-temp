@@ -63,7 +63,7 @@ export default function AboutPage() {
 
           <p className="mt-4 max-w-xl text-[16px] lg:text-[17px] leading-7 text-white/60">
             Materialistic Exhibitors Collection LLP, building exceptional
-            exhibition experiences since 2005.
+            exhibition experiences since 2011.
           </p>
         </div>
       </section>
@@ -83,7 +83,7 @@ export default function AboutPage() {
             </h2>
 
             <p className="mt-5 text-[15.5px] text-[#4B5563] leading-7">
-              MEC India was founded in 2005 by a team of exhibition design
+              MEC India was founded in 2011 by a team of exhibition design
               professionals with a simple vision: deliver high-quality stalls on
               time, every time. What started as a small workshop in Mumbai has
               grown into one of India&apos;s trusted exhibition stall design and
