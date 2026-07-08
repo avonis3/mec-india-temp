@@ -15,7 +15,7 @@ export default function Hero() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImage((prev) => (prev + 1) % images.length);
-    }, 300);
+    }, 3000); // Change image every 3 seconds
 
     return () => clearInterval(interval);
   }, []);
@@ -23,21 +23,21 @@ export default function Hero() {
   return (
     <section className="bg-[var(--primary)] overflow-hidden">
       {/* DESKTOP */}
-<div className="hidden lg:block relative min-h-[760px] overflow-hidden">
+      <div className="hidden lg:block relative min-h-[760px] overflow-hidden">
 
-  {/* Background Slideshow */}
-  {images.map((image, index) => (
-    <img
-      key={image}
-      src={image}
-      alt=""
-      className={`absolute inset-0 w-full h-full object-cover transition-all duration-[1800ms] ${
-        currentImage === index
-          ? "opacity-100 scale-100"
-          : "opacity-0 scale-105"
-      }`}
-    />
-  ))}
+        {/* Background Slideshow */}
+        {images.map((image, index) => (
+          <img
+            key={image}
+            src={image}
+            alt=""
+            className={`absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-in-out ${
+              currentImage === index
+                ? "opacity-100 scale-100"
+                : "opacity-0 scale-105"
+            }`}
+          />
+        ))}
 
   {/* Main Dark Blue Gradient */}
   <div className="absolute inset-0 bg-gradient-to-r from-[#031B3C]/95 via-[#031B3C]/82 via-20% to-[#031B3C]/25" />
