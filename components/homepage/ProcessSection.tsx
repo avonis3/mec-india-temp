@@ -1,8 +1,24 @@
 const steps = [
-  ["01", "Share Your Brief", "Tell us your exhibition name, stall size, brand guidelines, and goals. We take it from there."],
-  ["02", "Get Design Options", "We create 2 to 3 custom design concepts tailored to your brief. Free of charge, no obligations."],
-  ["03", "Approve and Build", "Once you approve, production begins with full project management and regular updates."],
-  ["04", "Install and Go Live", "Our on-site team handles setup, installation, and final checks at the venue."],
+  [
+    "01",
+    "Share Your Brief",
+    "Tell us your exhibition name, stall size, brand guidelines, and goals. We take it from there.",
+  ],
+  [
+    "02",
+    "Get Design Options",
+    "We create 2 to 3 custom design concepts tailored to your brief. Free of charge, no obligations.",
+  ],
+  [
+    "03",
+    "Approve and Build",
+    "Once you approve, production begins with full project management and regular updates.",
+  ],
+  [
+    "04",
+    "Install and Go Live",
+    "Our on-site team handles setup, installation, and final checks at the venue.",
+  ],
 ];
 
 export default function ProcessSection() {
@@ -20,7 +36,8 @@ export default function ProcessSection() {
           From brief to build in four steps.
         </h2>
 
-        {/* MOBILE SLIDER */}
+        {/* ================= MOBILE ================= */}
+
         <div className="lg:hidden mt-12 overflow-x-auto snap-x snap-mandatory flex gap-5 pb-6 px-1">
           {steps.map(([num, title, desc]) => (
             <div
@@ -53,25 +70,35 @@ export default function ProcessSection() {
           <span className="w-2 h-2 rounded-full bg-[#CBD5E1]" />
         </div>
 
-        {/* DESKTOP ORIGINAL */}
-        <div className="hidden lg:grid relative mt-14 gap-10 grid-cols-4">
-          <div className="absolute top-[34px] left-[9%] right-[9%] h-px bg-[#E5E7EB]" />
+        {/* ================= DESKTOP ================= */}
 
-          {steps.map(([num, title, desc]) => (
-            <div key={num} className="relative z-10">
-              <div className="mx-auto mb-7 flex h-[70px] w-[70px] items-center justify-center rounded-full border-2 border-[#E5E7EB] bg-white text-lg font-bold text-[#6B7280] transition-all duration-300 hover:bg-[var(--accent)] hover:border-[var(--accent)] hover:text-white cursor-pointer">
-                {num}
+        <div className="hidden lg:block mt-16 relative">
+          <div className="absolute top-8 left-[12%] right-[12%] h-[2px] bg-[#E5E7EB]" />
+
+          <div className="relative z-10 grid grid-cols-4 gap-8">
+            {steps.map(([num, title, desc]) => (
+              <div
+                key={num}
+                className="group relative rounded-3xl bg-white border border-[#E5E7EB] px-7 pt-16 pb-10 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-[var(--accent)]"
+              >
+                <div className="absolute -top-8 left-1/2 -translate-x-1/2 flex h-16 w-16 items-center justify-center rounded-full bg-white border-4 border-[var(--accent)] text-lg font-extrabold text-[var(--accent)] transition-all duration-300 group-hover:bg-[var(--accent)] group-hover:text-white">
+                  {num}
+                </div>
+
+                <span className="absolute bottom-4 right-5 text-[64px] font-extrabold leading-none text-black/5 select-none">
+                  {num}
+                </span>
+
+                <h3 className="text-[20px] font-bold text-[#111111] text-center">
+                  {title}
+                </h3>
+
+                <p className="mt-5 text-[15px] leading-7 text-[#6B7280] text-center">
+                  {desc}
+                </p>
               </div>
-
-              <h3 className="text-[17px] font-bold text-[#111111]">
-                {title}
-              </h3>
-
-              <p className="mx-auto mt-4 max-w-[260px] text-[14.5px] leading-7 text-[#6B7280]">
-                {desc}
-              </p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

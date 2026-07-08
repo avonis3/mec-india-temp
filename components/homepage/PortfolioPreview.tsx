@@ -7,32 +7,32 @@ import { useState } from "react";
 const projects = [
   {
     image: "/images/homepage/vts.jpeg",
-    // logo: "/images/logos/vts.png",
+    logo: "/images/logos/vts.png",
     name: "VTS",
   },
   {
     image: "/images/homepage/adn.jpeg",
-    // logo: "/images/logos/adn.png",
+    logo: "/images/logos/adn.jpg",
     name: "ADN",
   },
   {
     image: "/images/homepage/siddh.jpeg",
-    // logo: "/images/logos/siddh.png",
+    logo: "/images/logos/siddh.jpg",
     name: "Siddh",
   },
   {
     image: "/images/homepage/vent.jpg",
-    // logo: "/images/logos/vent.png",
+    logo: "/images/logos/vent.jpg",
     name: "Vent",
   },
   {
     image: "/images/homepage/yasham.jpeg",
-    // logo: "/images/logos/yasham.png",
+    logo: "/images/logos/yasham.png",
     name: "Yasham",
   },
   {
     image: "/images/homepage/botanic.jpeg",
-    // logo: "/images/logos/botanic.png",
+    logo: "/images/logos/botanic.png",
     name: "Botanic",
   },
 ];
@@ -109,7 +109,7 @@ const prev = () =>
         <div className="absolute inset-0 rounded-2xl bg-[var(--primary)] flex items-center justify-center [transform:rotateY(180deg)] [backface-visibility:hidden]">
 
           <img
-            // src={project.logo}
+            src={project.logo}
             alt={project.name}
             className="max-w-[170px] max-h-[90px] object-contain"
           />
@@ -163,7 +163,7 @@ const prev = () =>
         <div className="absolute inset-0 rounded-2xl bg-[var(--primary)] flex items-center justify-center [transform:rotateY(180deg)] [backface-visibility:hidden]">
 
           <img
-            // src={projects[current].logo}
+            src={projects[current].logo}
             alt={projects[current].name}
             className="max-w-[160px] max-h-[80px] object-contain"
           />
