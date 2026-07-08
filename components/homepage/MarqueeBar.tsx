@@ -25,7 +25,7 @@ const logos = [
 export default function MarqueeBar() {
   return (
     <section className="bg-[var(--accent)] overflow-hidden py-3 md:py-5">
-      <div className="flex whitespace-nowrap animate-[marquee_7s_linear_infinite] md:animate-[marquee_35s_linear_infinite]">
+      <div className="flex whitespace-nowrap animate-[marquee_6s_linear_infinite] md:animate-[marquee_11s_linear_infinite]">
 
         {[...logos, ...logos].map((logo, index) => (
           <div
