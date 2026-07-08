@@ -14,9 +14,9 @@ export default function TopBar() {
 
           <a
             className="text-white/70 hover:text-white transition"
-            href="mailto:manoj.malpani@gmail.com"
+            href="mailto:manoj.malpani@mecindia.co.in"
           >
-            manoj.malpani@gmail.com
+            manoj.malpani@mecindia.co.in
           </a>
         </div>
 

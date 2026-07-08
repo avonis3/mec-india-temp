@@ -84,8 +84,8 @@ export default function Footer() {
               <a href="tel:+919920328287" className="hover:text-white">
                 +91 9920 328 287
               </a>
-              <a href="mailto:manoj.malpani@gmail.com" className="hover:text-white">
-                manoj.malpani@gmail.com
+              <a href="mailto:manoj.malpani@mecindia.co.in" className="hover:text-white">
+                manoj.malpani@mecindia.co.in
               </a>
               <p>Prabhadevi, Mumbai 400025</p>
             </div>

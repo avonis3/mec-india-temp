@@ -125,7 +125,7 @@ ${message}`;
               <ContactItem
                 icon={<Mail size={18} />}
                 label="Email"
-                value="manoj.malpani@gmail.com"
+                value="manoj.malpani@mecindia.co.in"
               />
               <ContactItem
                 icon={<Clock size={18} />}

@@ -73,7 +73,7 @@ const projects = [
   },
   {
     company: "Unicam",
-    exhibition: "Medicall",
+    exhibition: "Acrex",
     logo: "/images/logos/unicam.png",
     image: "/images/portfolio/unicam.jpeg",
   },
@@ -91,7 +91,7 @@ const projects = [
   },
   {
     company: "Intec",
-    exhibition: "Automation Expo",
+    exhibition: "Acrex",
     logo: "/images/logos/intec.png",
     image: "/images/portfolio/intec.jpeg",
   },
