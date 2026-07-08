@@ -4,54 +4,64 @@ export default function Blog5Page() {
   return (
     <>
       <BlogHero
-        category="Preventive Health"
-        title="Why Vitamin B12 and Vitamin D Tests Should Be Done Regularly"
+        category="Exhibition Tips"
+        title="10 Best Practices for a Successful Exhibition Stall"
         image="/images/homepage/ourwork2.png"
       />
 
       <BlogArticle>
         <p>
-          Vitamin B12 and Vitamin D deficiencies are very common today,
-          especially among people with indoor lifestyles, limited sunlight
-          exposure, vegetarian diets, irregular meals, and long working hours.
-        </p>
+  A successful exhibition is about much more than an attractive stall. The best
+  exhibition experiences combine thoughtful design, visitor engagement, clear
+  communication, and professional execution to create meaningful business
+  opportunities.
+</p>
 
-        <h2>Why Vitamin B12 is important</h2>
+<h2>Define clear exhibition goals</h2>
 
-        <p>
-          Vitamin B12 supports nerve function, blood cell formation, energy
-          levels, and brain health. Low B12 may cause tiredness, weakness,
-          numbness, memory issues, mood changes, and nerve-related symptoms.
-        </p>
+<p>
+  Before designing a stall, identify your objectives. Whether the goal is lead
+  generation, product launches, networking, or brand awareness, every design
+  decision should support the desired outcome.
+</p>
 
-        <h2>Why Vitamin D is important</h2>
+<h2>Create an inviting visitor journey</h2>
 
-        <p>
-          Vitamin D supports bone strength, muscle function, immunity, and
-          overall wellbeing. Low Vitamin D can lead to body pain, weakness,
-          frequent fatigue, low mood, and increased risk of bone-related issues.
-        </p>
+<p>
+  Open layouts, comfortable meeting spaces, interactive product displays, and
+  clear signage encourage visitors to enter the stall naturally. Avoid clutter
+  and make it easy for people to understand your products and services.
+</p>
 
-        <h2>Why regular testing helps</h2>
+<h2>Train your exhibition team</h2>
 
-        <p>
-          Many people ignore symptoms or blame them on workload and stress.
-          Regular testing helps identify deficiencies early. Once detected,
-          doctors can recommend diet changes, supplements, sunlight exposure, or
-          further evaluation.
-        </p>
+<p>
+  Even the best-designed stall relies on knowledgeable and approachable staff.
+  Team members should greet visitors confidently, understand the products, and
+  engage in meaningful conversations that build lasting business relationships.
+</p>
 
-        <h2>Useful for workplace wellness</h2>
+<h2>Use technology wisely</h2>
 
-        <p>
-          Including Vitamin B12 and Vitamin D tests in employee wellness packages
-          can help companies support energy, productivity, and preventive health.
-        </p>
+<p>
+  Digital displays, LED walls, touchscreens, product demonstrations, and QR
+  codes can enhance the visitor experience when used strategically. Technology
+  should support the conversation rather than distract from it.
+</p>
 
-        <p>
-          Regular testing is simple, practical, and useful for long-term health
-          management.
-        </p>
+<h2>Measure success after the event</h2>
+
+<p>
+  Review visitor engagement, qualified leads, customer feedback, and overall
+  return on investment after every exhibition. These insights help improve future
+  exhibition strategies and maximise long-term business growth.
+</p>
+
+<p>
+  At MEC India, we combine design expertise, quality fabrication, and seamless
+  execution to create exhibition experiences that leave a lasting impression on
+  every visitor.
+</p>
       </BlogArticle>
     </>
   );

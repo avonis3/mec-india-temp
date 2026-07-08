@@ -4,64 +4,67 @@ export default function Blog1Page() {
   return (
     <>
       <BlogHero
-        category="Occupational Health"
-        title="Pre-employment Health Check-up for Food Handlers"
+        category="Exhibition Design"
+        title="The Complete Guide to Exhibition Stall Design"
         image="/images/homepage/service1.png"
       />
 
       <BlogArticle>
         <p>
-          Food handlers work directly with raw ingredients, cooked food,
-          packaging materials, serving counters, and storage areas. Because of
-          this, their health has a direct impact on food safety. A
-          pre-employment health check-up helps confirm that a new employee is
-          medically fit to work in a food-handling environment.
-        </p>
+  An exhibition is one of the few places where customers can experience your
+  brand in person. In a crowded exhibition hall, visitors make decisions within
+  seconds about which stalls deserve their attention. A thoughtfully designed
+  exhibition stall not only attracts footfall but also creates meaningful
+  conversations that can turn into valuable business opportunities.
+</p>
 
-        <h2>Why this check-up matters</h2>
+<h2>First impressions matter</h2>
 
-        <p>
-          Food-borne infections can spread quickly if hygiene standards are not
-          maintained. Even one infected worker can create a risk for customers,
-          co-workers, and the company. Medical screening helps detect visible
-          and hidden health problems before the person starts work.
-        </p>
+<p>
+  Visitors often walk past hundreds of exhibitors during a single event.
+  Attractive lighting, clear branding, open layouts, and well-planned product
+  displays immediately communicate professionalism and encourage people to step
+  inside. A clean, welcoming stall creates confidence before a conversation even
+  begins.
+</p>
 
-        <p>
-          These checks are especially important for hotels, restaurants,
-          canteens, food factories, cloud kitchens, catering companies, and
-          packaging units. They help businesses maintain hygiene standards and
-          build customer confidence.
-        </p>
+<p>
+  Every exhibition has different objectives. Some brands want to launch a new
+  product, others aim to generate leads, while many focus on strengthening
+  relationships with existing customers. The stall design should always support
+  these business goals rather than simply looking attractive.
+</p>
 
-        <h2>What tests are usually included?</h2>
+<h2>Design that reflects your brand</h2>
 
-        <p>
-          A basic food handler check-up may include a general physical
-          examination, skin inspection, respiratory screening, stool test, blood
-          test, and other tests depending on company policy or industry
-          requirements.
-        </p>
+<p>
+  An exhibition stall should feel like an extension of your company's identity.
+  Consistent colours, graphics, messaging, and product presentation help
+  visitors instantly recognise your brand. Custom-designed spaces also make it
+  easier to communicate your values and create a memorable experience.
+</p>
 
-        <p>
-          The purpose is not to reject employees unfairly. The purpose is to
-          identify health risks early and guide the worker towards proper
-          treatment when required.
-        </p>
+<p>
+  Functional planning is equally important. Meeting areas, product displays,
+  storage space, digital screens, and visitor movement should all be considered
+  during the design stage to ensure the stall works efficiently throughout the
+  exhibition.
+</p>
 
-        <h2>How often should it be done?</h2>
+<h2>Planning makes the difference</h2>
 
-        <p>
-          A pre-employment check-up should be done before joining. After that,
-          companies should conduct periodic medical checks based on workplace
-          risk, hygiene requirements, and applicable rules.
-        </p>
+<p>
+  Successful exhibition projects begin long before the event. Understanding the
+  venue, stall dimensions, visitor flow, and exhibition regulations allows the
+  design team to create a space that is visually appealing while remaining
+  practical to build and manage.
+</p>
 
-        <p>
-          Regular health monitoring, combined with training in hand hygiene,
-          protective clothing, and safe food handling, creates a safer workplace
-          and reduces avoidable risks.
-        </p>
+<p>
+  At MEC India, every project is carefully planned to combine creative design,
+  quality fabrication, and seamless execution, helping brands maximise their
+  presence at exhibitions across India.
+</p>
       </BlogArticle>
     </>
   );
@@ -105,7 +108,26 @@ function BlogArticle({ children }: { children: React.ReactNode }) {
   return (
     <section className="bg-white py-14 lg:py-16">
       <article className="max-w-3xl mx-auto px-6 lg:px-10">
-        <div className="prose-content">{children}</div>
+        <div
+  className="
+    prose-content
+    max-w-none
+
+    [&>p]:text-[19px]
+    [&>p]:leading-[2]
+    [&>p]:text-[#4B5563]
+    [&>p]:mb-8
+
+    [&>h2]:text-[36px]
+    [&>h2]:font-extrabold
+    [&>h2]:leading-tight
+    [&>h2]:text-[#111111]
+    [&>h2]:mt-14
+    [&>h2]:mb-6
+  "
+>
+  {children}
+</div>
 
         <div className="mt-12 rounded-xl bg-[#F4F4F2] p-7 text-center">
           <h2 className="text-[24px] font-extrabold text-[#111111]">

@@ -4,63 +4,66 @@ export default function Blog2Page() {
   return (
     <>
       <BlogHero
-        category="Lab Testing"
-        title="Blood Lead Test: Meaning, Importance, and When It Is Needed"
+        category="Modular Displays"
+        title="Why Modular Exhibition Stalls Are the Future"
         image="/images/homepage/service2.png"
       />
 
       <BlogArticle>
         <p>
-          A blood lead test measures the amount of lead present in a person’s
-          blood. Lead exposure is a serious occupational health concern in
-          industries where workers may come in contact with lead dust, fumes, or
-          contaminated materials.
-        </p>
+  Businesses today participate in multiple exhibitions throughout the year,
+  making flexibility and cost efficiency more important than ever. Modular
+  exhibition stalls have become a popular solution because they combine modern
+  design with the ability to adapt to different exhibition spaces.
+</p>
 
-        <h2>Where can lead exposure happen?</h2>
+<h2>What is a modular exhibition stall?</h2>
 
-        <p>
-          Lead exposure can happen in battery manufacturing, painting,
-          construction, metal work, welding, recycling, printing, ceramics, and
-          similar industrial environments. Workers may inhale lead particles or
-          accidentally ingest them through contaminated hands, food, or surfaces.
-        </p>
+<p>
+  A modular stall is built using reusable structural components that can be
+  assembled, dismantled, and reconfigured for different exhibitions. Unlike
+  permanent custom-built structures, modular systems provide greater flexibility
+  while maintaining a professional appearance.
+</p>
 
-        <h2>Why is lead dangerous?</h2>
+<h2>Cost-effective for multiple events</h2>
 
-        <p>
-          Lead can affect the nervous system, kidneys, blood cells, digestive
-          system, and overall health. In many cases, symptoms develop slowly.
-          Workers may experience tiredness, stomach pain, headache, irritability,
-          weakness, or concentration issues.
-        </p>
+<p>
+  Companies exhibiting at several trade shows can significantly reduce costs by
+  reusing key structural elements instead of building a completely new stall for
+  every event. Graphics, branding panels, and display sections can also be
+  updated without replacing the entire setup.
+</p>
 
-        <p>
-          Because early symptoms may look minor, regular testing becomes
-          important. It helps identify exposure before it becomes a serious
-          health problem.
-        </p>
+<p>
+  This makes modular solutions an excellent choice for businesses looking to
+  maintain a consistent brand presence while keeping exhibition budgets under
+  control.
+</p>
 
-        <h2>Who should get tested?</h2>
+<h2>Easy to transport and install</h2>
 
-        <p>
-          Employees working in high-risk environments should undergo blood lead
-          testing at regular intervals. The frequency depends on the nature of
-          the job, workplace exposure level, and safety policy.
-        </p>
+<p>
+  Modular systems are designed for efficient transportation and quick
+  installation. Their lightweight construction reduces logistics challenges and
+  allows installation teams to complete projects within tight exhibition
+  schedules without compromising quality.
+</p>
 
-        <p>
-          If a worker shows high lead levels, the company should review workplace
-          controls, ventilation, PPE use, housekeeping, and medical follow-up.
-        </p>
+<h2>Designed for flexibility</h2>
 
-        <h2>How does testing help companies?</h2>
+<p>
+  One of the biggest advantages of modular exhibition displays is their ability
+  to adapt. The same components can often be configured for different stall
+  sizes, layouts, and exhibition venues, allowing brands to maintain a
+  professional image wherever they exhibit.
+</p>
 
-        <p>
-          Blood lead testing protects employees and also helps companies monitor
-          whether safety systems are working. It supports occupational health
-          compliance and reduces long-term health risks.
-        </p>
+<p>
+  At MEC India, we combine creative design with high-quality modular systems to
+  deliver exhibition stalls that are attractive, practical, and built for
+  repeated use.
+</p>
       </BlogArticle>
     </>
   );

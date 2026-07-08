@@ -4,57 +4,59 @@ export default function Blog4Page() {
   return (
     <>
       <BlogHero
-        category="Corporate Wellness"
-        title="Stress Management in IT Companies"
+        category="Fabrication"
+        title="Behind the Scenes: Exhibition Stall Fabrication Process"
         image="/images/homepage/ourwork1.png"
       />
 
       <BlogArticle>
         <p>
-          IT employees often work under tight deadlines, long screen hours,
-          continuous client communication, and fast-changing project
-          requirements. Over time, this can create stress, fatigue, poor sleep,
-          reduced focus, and burnout.
-        </p>
+  Turning a creative design into a finished exhibition stall requires precision,
+  planning, and skilled craftsmanship. The fabrication process plays a crucial
+  role in ensuring every design is built safely, accurately, and on schedule for
+  the exhibition.
+</p>
 
-        <h2>Why stress management matters</h2>
+<h2>From concept to production</h2>
 
-        <p>
-          Stress does not only affect mental health. It can also affect physical
-          health, productivity, communication, teamwork, and employee retention.
-          A stressed team may complete work, but not always with energy,
-          creativity, or consistency.
-        </p>
+<p>
+  Once a design is approved, detailed production drawings are prepared before
+  fabrication begins. Every structural element, display panel, lighting fixture,
+  and branding component is carefully planned to ensure smooth assembly at the
+  venue.
+</p>
 
-        <h2>What companies can do</h2>
+<h2>Quality materials matter</h2>
 
-        <p>
-          IT companies can support employees through wellness sessions,
-          counselling support, ergonomic workstations, planned breaks, realistic
-          deadlines, health check-ups, and manager awareness training.
-        </p>
+<p>
+  Selecting the right materials is essential for durability, appearance, and
+  safety. Depending on the project requirements, fabrication may involve wood,
+  metal, acrylic, glass, modular systems, fabric graphics, and premium finishes
+  that enhance the overall presentation.
+</p>
 
-        <p>
-          Stress management should not be treated as a one-day workshop. It
-          should become part of the company culture.
-        </p>
+<h2>Precision and workmanship</h2>
 
-        <h2>Role of health check-ups</h2>
+<p>
+  Skilled fabrication teams ensure every component is manufactured with attention
+  to detail. Accurate measurements, clean finishes, and strong structural
+  construction help deliver a professional exhibition stall that performs
+  reliably throughout the event.
+</p>
 
-        <p>
-          Regular health screening can identify stress-related issues such as
-          high blood pressure, sleep problems, low vitamin levels, and other
-          early warning signs. This helps employees take corrective steps before
-          problems become severe.
-        </p>
+<h2>Installation and final execution</h2>
 
-        <h2>Healthy employees build stronger teams</h2>
+<p>
+  After fabrication, all components are transported to the venue where the stall
+  is assembled, branded, and inspected before the exhibition opens. Careful
+  project management ensures timely completion without compromising quality.
+</p>
 
-        <p>
-          When employees feel supported, they communicate better, perform better,
-          and stay longer with the organisation. Stress management is good for
-          people and good for business.
-        </p>
+<p>
+  At MEC India, our in-house fabrication capabilities allow us to maintain high
+  quality standards while delivering exhibition stalls that are visually
+  impressive and built to last.
+</p>
       </BlogArticle>
     </>
   );

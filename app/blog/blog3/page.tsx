@@ -4,57 +4,60 @@ export default function Blog3Page() {
   return (
     <>
       <BlogHero
-        category="Factory Health"
-        title="Why Annual Medical Check-up Is Essential in Factories"
+        category="Branding Solutions"
+        title="Exhibition Branding That Makes Your Stall Stand Out"
         image="/images/homepage/service3.png"
       />
 
       <BlogArticle>
         <p>
-          Factory work can involve machinery, dust, heat, noise, chemicals,
-          heavy lifting, repetitive movement, and long working hours. Annual
-          medical check-ups help identify health issues early and protect
-          workers from occupational risks.
-        </p>
+  A successful exhibition stall is more than an attractive structure—it is a
+  physical representation of your brand. Every colour, graphic, product display,
+  and visitor interaction should communicate a consistent brand identity. Strong
+  branding helps visitors remember your company long after the exhibition has
+  ended.
+</p>
 
-        <h2>Early detection protects workers</h2>
+<h2>Why branding matters at exhibitions</h2>
 
-        <p>
-          Many health problems develop silently. High blood pressure, diabetes,
-          lung issues, hearing loss, and vision problems may not show clear
-          symptoms in the early stages. A yearly check-up helps detect these
-          problems before they become serious.
-        </p>
+<p>
+  Exhibition halls are filled with competing businesses, making it essential for
+  brands to stand out instantly. A professionally branded stall attracts
+  attention, builds credibility, and encourages visitors to explore your
+  products and services.
+</p>
 
-        <h2>What can be included?</h2>
+<p>
+  Clear messaging, consistent colours, high-quality graphics, and well-placed
+  logos make it easier for visitors to recognise your company even from a
+  distance. Strong visual branding also improves recall after the event.
+</p>
 
-        <p>
-          A factory medical check-up may include blood tests, urine tests, ECG,
-          lung function test, audiometry, vision test, chest X-ray, and general
-          physician examination. The exact test package depends on the industry
-          and worker exposure.
-        </p>
+<h2>Creating a consistent experience</h2>
 
-        <p>
-          For example, workers exposed to dust may need lung function testing,
-          while workers exposed to noise may need regular hearing checks.
-        </p>
+<p>
+  Effective branding goes beyond banners and signboards. Furniture, lighting,
+  digital displays, product showcases, uniforms, and interactive elements should
+  all reflect the same visual identity. Consistency creates a professional
+  impression and strengthens customer confidence.
+</p>
 
-        <h2>Benefits for companies</h2>
+<h2>Communicating your message</h2>
 
-        <p>
-          Annual check-ups support employee wellbeing, reduce absenteeism, and
-          help maintain health records. They also help management understand
-          workplace risks and improve safety measures.
-        </p>
+<p>
+  Visitors should immediately understand who you are and what your business
+  offers. Short, impactful messaging combined with attractive visuals helps
+  communicate your value proposition without overwhelming the audience.
+</p>
 
-        <h2>A safer workplace culture</h2>
+<h2>Building lasting brand recognition</h2>
 
-        <p>
-          Medical check-ups should not be seen only as a compliance activity.
-          They are part of a responsible safety culture where employee health is
-          treated as a priority.
-        </p>
+<p>
+  A memorable exhibition experience encourages visitors to remember your company
+  long after the event. At MEC India, we create branding solutions that combine
+  creativity, functionality, and strategic design to maximise your exhibition
+  presence.
+</p>
       </BlogArticle>
     </>
   );

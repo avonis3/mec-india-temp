@@ -2,48 +2,52 @@ import Link from "next/link";
 
 const blogs = [
   {
-    title: "Pre-employment Health Check-up for Food Handlers",
-    category: "Occupational Health",
-    date: "January 2026",
+    title: "The Complete Guide to Exhibition Stall Design",
+    category: "Exhibition Design",
+    date: "July 2026",
     excerpt:
-      "Why food handlers should undergo medical screening before employment and how it helps maintain hygiene and workplace safety.",
-    image: "/images/homepage/service1.png",
-    href: "/blog/blog1"
+      "Learn how thoughtful exhibition stall design attracts visitors, increases engagement, and creates memorable brand experiences. Explore planning, layouts, materials, and modern design trends.",
+    image: "/images/portfolio/botanic.jpeg",
+    href: "/blog/blog1",
   },
+
   {
-    title: "Blood Lead Test: Meaning, Importance, and When It Is Needed",
-    category: "Lab Testing",
-    date: "January 2026",
+    title: "Why Modular Exhibition Stalls Are the Future",
+    category: "Modular Displays",
+    date: "July 2026",
     excerpt:
-      "A simple guide to blood lead testing, who needs it, and why regular monitoring matters in high-risk work environments.",
-    image: "/images/homepage/service2.png",
+      "Discover how modular exhibition stalls reduce costs, improve flexibility, and allow brands to reuse premium display systems across multiple exhibitions and trade shows.",
+    image: "/images/homepage/ourwork2.png",
     href: "/blog/blog2",
   },
+
   {
-    title: "Why Annual Medical Check-up Is Essential in Factories",
-    category: "Factory Health",
-    date: "January 2026",
+    title: "Exhibition Branding That Makes Your Stall Stand Out",
+    category: "Branding Solutions",
+    date: "July 2026",
     excerpt:
-      "Annual check-ups help detect early health risks, support compliance, and protect factory workers from occupational illnesses.",
-    image: "/images/homepage/service3.png",
+      "Strong branding transforms an exhibition stall into a powerful marketing tool. Learn how graphics, lighting, messaging, and layouts influence visitor engagement.",
+    image: "/images/homepage/ourwork3.png",
     href: "/blog/blog3",
   },
+
   {
-    title: "Stress Management in IT Companies",
-    category: "Corporate Wellness",
-    date: "January 2026",
+    title: "Behind the Scenes: Exhibition Stall Fabrication Process",
+    category: "Fabrication",
+    date: "July 2026",
     excerpt:
-      "Practical ways companies can identify workplace stress and support employee wellbeing in high-pressure IT environments.",
-    image: "/images/homepage/ourwork1.png",
+      "From concept approval to manufacturing and on-site installation, explore how professional exhibition stall fabrication ensures quality, durability, and timely project delivery.",
+    image: "/images/homepage/service1.png",
     href: "/blog/blog4",
   },
+
   {
-    title: "Why Vitamin B12 and Vitamin D Tests Should Be Done Regularly",
-    category: "Preventive Health",
-    date: "January 2026",
+    title: "10 Best Practices for a Successful Exhibition Stall",
+    category: "Exhibition Tips",
+    date: "July 2026",
     excerpt:
-      "Vitamin deficiencies are common and often ignored. Regular testing can help detect problems before symptoms become severe.",
-    image: "/images/homepage/ourwork2.png",
+      "Planning your next exhibition? Follow these proven best practices for stall design, visitor engagement, branding, lighting, and lead generation to maximize your exhibition ROI.",
+    image: "/images/portfolio/zeus.jpg",
     href: "/blog/blog5",
   },
 ];
@@ -69,17 +73,16 @@ export default function BlogPage() {
           <div className="flex items-center gap-2 mb-4">
             <span className="w-5 h-[2px] bg-[var(--accent)]" />
             <p className="text-[12px] font-semibold tracking-[0.14em] uppercase text-[var(--accent)]">
-              Insights
+              Knowledge Hub
             </p>
           </div>
 
           <h1 className="text-[34px] sm:text-[44px] lg:text-[56px] font-extrabold leading-[1.1] tracking-[-0.02em] text-white">
-            Insights and Updates
+            Exhibition Insights & Ideas
           </h1>
 
           <p className="mt-4 max-w-xl text-[16px] lg:text-[17px] leading-7 text-white/60">
-            Helpful articles on occupational health, workplace wellness, and
-            preventive medical testing.
+            Explore expert articles on exhibition stall design, modular displays, branding strategies, fabrication techniques, and best practices for creating memorable exhibition experiences.
           </p>
         </div>
       </section>
