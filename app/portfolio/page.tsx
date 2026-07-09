@@ -144,10 +144,10 @@ const projects = [
     image: "/images/portfolio/sfmarine.jpg",
   },
   {
-    company: "SGF",
+    company: "SGp",
     exhibition: "NA",
-    logo: "/images/logos/sgf.png",
-    image: "/images/portfolio/sgf.jpg",
+    logo: "/images/logos/sgp.png",
+    image: "/images/portfolio/sgp.png",
   },
   {
     company: "Zeus",
@@ -172,6 +172,18 @@ const projects = [
     exhibition: "FI India",
     logo: "/images/logos/maak.jpg",
     image: "/images/portfolio/maak.jpg",
+  },
+  {
+    company: "Motherson",
+    exhibition: "Plastasia",
+    logo: "/images/logos/motherson.png",
+    image: "/images/portfolio/motherson.jpeg",
+  },
+  {
+    company: "Servotec",
+    exhibition: "NA",
+    logo: "/images/logos/servotec.png",
+    image: "/images/portfolio/servotec.jpeg",
   },
 ];
 
