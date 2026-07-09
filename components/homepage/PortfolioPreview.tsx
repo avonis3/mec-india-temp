@@ -9,31 +9,37 @@ const projects = [
     image: "/images/homepage/vts.jpeg",
     logo: "/images/logos/vts.png",
     name: "VTS",
+    exhibition: "Acrex",
   },
   {
     image: "/images/homepage/adn.jpeg",
     logo: "/images/logos/adn.jpg",
     name: "ADN",
+    exhibition: "Acrex",
   },
   {
     image: "/images/homepage/siddh.jpeg",
     logo: "/images/logos/siddh.jpg",
     name: "Siddh",
+    exhibition: "Bharat Tex",
   },
   {
     image: "/images/homepage/vent.jpg",
     logo: "/images/logos/vent.jpg",
     name: "Vent",
+    exhibition: "FI India",
   },
   {
     image: "/images/homepage/yasham.jpeg",
     logo: "/images/logos/yasham.png",
     name: "Yasham",
+    exhibition: "CPHI PMEC India",
   },
   {
     image: "/images/homepage/botanic.jpeg",
     logo: "/images/logos/botanic.png",
     name: "Botanic",
+    exhibition: "Vitafoods India",
   },
 ];
 
@@ -106,15 +112,34 @@ const prev = () =>
 
         {/* BACK */}
 
-        <div className="absolute inset-0 rounded-2xl bg-[var(--primary)] flex items-center justify-center [transform:rotateY(180deg)] [backface-visibility:hidden]">
+        <div
+  className="
+    absolute inset-0
+    rounded-2xl
+    bg-[var(--primary)]
+    flex flex-col
+    items-center
+    justify-center
+    text-center
+    px-6
+    [transform:rotateY(180deg)]
+    [backface-visibility:hidden]
+  "
+>
+  <img
+    src={project.logo}
+    alt={project.name}
+    className="max-w-[170px] max-h-[80px] object-contain mb-6"
+  />
 
-          <img
-            src={project.logo}
-            alt={project.name}
-            className="max-w-[170px] max-h-[90px] object-contain"
-          />
+  <h3 className="text-white text-xl font-bold">
+    {project.exhibition}
+  </h3>
 
-        </div>
+<p className="text-white/70 text-sm mt-3">
+  Designed by MEC India
+</p>
+</div>
 
       </div>
 
@@ -160,15 +185,34 @@ const prev = () =>
 
         {/* BACK */}
 
-        <div className="absolute inset-0 rounded-2xl bg-[var(--primary)] flex items-center justify-center [transform:rotateY(180deg)] [backface-visibility:hidden]">
+        <div
+  className="
+    absolute inset-0
+    rounded-2xl
+    bg-[var(--primary)]
+    flex flex-col
+    items-center
+    justify-center
+    text-center
+    px-6
+    [transform:rotateY(180deg)]
+    [backface-visibility:hidden]
+  "
+>
+  <img
+    src={projects[current].logo}
+    alt={projects[current].name}
+    className="max-w-[160px] max-h-[75px] object-contain mb-5"
+  />
 
-          <img
-            src={projects[current].logo}
-            alt={projects[current].name}
-            className="max-w-[160px] max-h-[80px] object-contain"
-          />
+  <h3 className="text-white text-lg font-bold">
+  {projects[current].exhibition}
+</h3>
 
-        </div>
+<p className="text-white/70 text-sm mt-3">
+  Designed by MEC India
+</p>
+</div>
 
       </div>
 
